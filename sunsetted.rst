@@ -20,9 +20,9 @@ Some reasons for each deprecation are included below.
 CPython
 -------
 
-Use of the CPython interpreter has generally been deprecated in the platform.
-New projects are encouraged to use **PyPy**, and existing projects are encouraged
-to move to PyPy if they are compute-intensive.
+Use of the CPython interpreter has generally been deprecated in the
+platform. New projects are encouraged to use **`PyPy`**, and existing
+projects are encouraged to move to PyPy if they are compute-intensive.
 
 Explanation
 ############
@@ -33,16 +33,16 @@ Explanation
 Chef
 ----
 
-`Chef <https://www.chef.io/chef/get-chef/>`_ was previously used as the
-configuration management system for platform components (and otherwise).
-**Ansible** should be used for all new services, and existing components'
-recipes should be ported to unified Ansible cookbooks in coordination with
-devops.
+`Chef <https://www.chef.io/chef/get-chef/>`_ was previously used as
+the configuration management system for platform components (and
+otherwise). **Ansible** should be used for all new services, and
+existing components' recipes should be ported to unified Ansible
+cookbooks in coordination with devops.
 
 Explanation
 ############
 
-* Written in a language closer to the day-to-day of engineering (Python, vs.
+* Written in a language closer to the day-to-day of engineering (Python vs.
   Ruby)
 * Can run agent-less on infrastructure machines, resulting in less resource
   usage
@@ -51,10 +51,10 @@ Explanation
 Vagrant
 -------
 
-Use of `vagrant <https://www.vagrantup.com/>`_ is discouraged for new and old
-platform components. Developers are *strongly encouraged* to make applications
-runnable **completely locally without expensive, hard-to-install
-dependencies**.
+Use of `vagrant <https://www.vagrantup.com/>`_ is discouraged for new
+and old platform components. Developers are *strongly encouraged* to
+make applications runnable **completely locally without expensive,
+hard-to-install dependencies**.
 
 **Docker** and **docker-compose** are other alternatives for developing
 reproduceable, pre-packaged app stacks.
