@@ -35,7 +35,7 @@ Collectively!
 Guild meetings, email chains, IRC, Slack and hallway meetings are all
 appropriate forums for improving our principles and policies.
 
-Disagree with an existing principle, guideline, or policy? Cool! Send a pull
+Disagree with an existing principle, guideline, or policy? Send a pull
 request to change it!
 
 
@@ -47,5 +47,5 @@ The policy documents in this repository are public.
 
 Some of the linked source code or other associated documents might not be.
 
-Some effort has been taken to make the surrounding prose in these instances
-self-contained enough to understand.
+Some effort has been expended to make the surrounding prose in these instances
+understandable in isolation.
