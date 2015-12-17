@@ -8,7 +8,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   development.rst
    common.rst
+   deployment.rst
    language-guides/python/development.rst
    language-guides/python/modules.rst
    language-guides/python/packaging.rst
@@ -43,10 +45,12 @@ request to change it!
 About This Repo
 ---------------
 
-
 The policy documents in this repository are public.
 
 Some of the linked source code or other associated documents might not be.
 
 Some effort has been expended to make the surrounding prose in these instances
 understandable in isolation.
+
+Please forgive inaccuracies or poor wording, as these documents are
+continuously evolving.
