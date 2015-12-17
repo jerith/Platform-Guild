@@ -16,6 +16,7 @@ Contents:
    language-guides/python/packaging.rst
    language-guides/python/style.rst
    ci.rst
+   sunsetted.rst
 
 
 The `Magnetic <http://www.magnetic.com>`_ platform guild is an Engineering
