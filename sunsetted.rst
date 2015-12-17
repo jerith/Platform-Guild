@@ -72,3 +72,17 @@ Explanation
 * Encourages better, self-contained applications for faster development
 * VMs were not in-sync with Chef cookbooks used for deployment to real
   machines, leading to multiple divergent provisioning scripts
+
+Direct DB Querying
+------------------
+
+Applications are discouraged from making direct connections to the UI database
+(or other shared databases) in favor of accessing configuration data via a
+service abstraction layer.
+
+Explanation
+###########
+
+* Tight coupling to (poor) data models has been a consistent source of errors
+  and frustration. Services allow the data model to evolve while still
+  providing a consistent interface for consumers.
