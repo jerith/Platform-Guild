@@ -30,7 +30,7 @@ our areas of interest.
 .. _Our manifesto: https://docs.google.com/document/d/1o5Yu2PuGWl_Bo46LYAk6aUDpS2JHJvVK1P05uGIM9yM/
 
 
-How are guild principles decided?
+How Are Guild Principles Decided?
 ---------------------------------
 
 Collectively!
