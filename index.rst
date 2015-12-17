@@ -9,6 +9,7 @@ Contents:
    :maxdepth: 2
 
    common.rst
+   language-guides/python/development.rst
    language-guides/python/modules.rst
    language-guides/python/packaging.rst
    language-guides/python/style.rst
