@@ -30,6 +30,7 @@ Explanation
 * Speed, performance, and resultant cost efficiency
 * Minimal "porting" effort
 
+
 Chef
 ----
 
@@ -48,6 +49,7 @@ Explanation
   usage
 * Chef cookbooks were poorly maintained and needed revision regardless
 
+
 Vagrant
 -------
 
@@ -58,7 +60,6 @@ hard-to-install dependencies**.
 
 **Docker** and **docker-compose** are other alternatives for developing
 reproduceable, pre-packaged app stacks.
-
 
 Explanation
 ############
@@ -73,6 +74,7 @@ Explanation
 * VMs were not in-sync with Chef cookbooks used for deployment to real
   machines, leading to multiple divergent provisioning scripts
 
+
 Direct DB Querying
 ------------------
 
@@ -86,3 +88,17 @@ Explanation
 * Tight coupling to (poor) data models has been a consistent source of errors
   and frustration. Services allow the data model to evolve while still
   providing a consistent interface for consumers.
+
+
+Non-conformant Python Package Layouts
+-------------------------------------
+
+Python packages that do not follow the suggested layout proposed in `Packaging
+Python Projects` are candidates for reshuffling.
+
+Explanation
+###########
+
+* Besides the benefits elaborated on in the aformentioned article, uniformity
+  of package and repository layout eases the burden for installation and
+  provisioning

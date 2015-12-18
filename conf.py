@@ -106,7 +106,11 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
-intersphinx_mapping = {"python": ("http://docs.python.org/2.7", None)}
+intersphinx_mapping = {
+    "packaging": ("https://packaging.python.org/en/latest/glossary/", None),
+    "python": ("http://docs.python.org/2.7", None),
+    "setuptools": ("http://pythonhosted.org/setuptools/", None),
+}
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -287,4 +291,3 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
-
