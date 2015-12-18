@@ -33,7 +33,7 @@ Packaging Python Projects
         It should contain at minimum:
             * a README
             * one (or more) packages
-            * a `setup.py`
+            * a `setup.py`_
 
         And may also contain:
             * a `requirements.txt`_ specifying its requirements
@@ -96,7 +96,7 @@ More on Scripts & Binaries
     `entry points`
 
 Any executables, binaries or `script`\ s associated with a package
-should be placed in a :file:`bin/` directory in the `repository root`.
+should be placed in a :file:`bin/` directory in the :term:`repository root`.
 Each binary should have its executable bit set (via :command:`chmod
 +x`).
 
@@ -134,9 +134,9 @@ to automatically include all scripts in the :file:`bin/` directory.
 
 .. note::
 
-    Do *not* use absolute paths to scripts in the `setup.py`, since
+    Do *not* use absolute paths to scripts in the `setup.py`_, since
     unfortunately `setuptools`_ requires them to be relative to the
-    `setup.py`_ / `repository root`_.
+    `setup.py`_ / :term:`repository root`.
 
 It is occasionally also useful to split scripts into two categories and
 place each category of scripts in its own folder:
