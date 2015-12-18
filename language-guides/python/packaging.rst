@@ -87,6 +87,20 @@ running:
 
     https://caremad.io/2013/07/setup-vs-requirement/
 
+Common variants of requirements are :file:`test-requirements.txt` to specify
+testing dependencies, :file:`doc-requirements.txt` to specify requirements for
+building a package's documentation, and :file:`deploy-requirements.txt` for
+specifying deployment dependencies. These variants should generally contain a
+line with ``-r requirements.txt`` if they need to also include the general
+requirements, rather than duplicating them.
+
+.. note::
+
+    In all cases, requirements contain *Python* (and closely related)
+    dependencies. A package may have non-Python dependencies that may
+    not be installable via :command:`pip install` and may require the
+    use of the host OS's package manger.
+
 
 More on Scripts & Binaries
 ==========================
