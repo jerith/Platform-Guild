@@ -37,7 +37,7 @@ Packaging Python Projects
 
         And may also contain:
             * a `requirements.txt`_ specifying its requirements
-            * a `deployment script <Deploying Applications>`_
+            * a `deployment`_ script
             * a `MANIFEST.in`_ containing additional package data to include
               when building distributions of the package
             * development-focused provisioning of a virtual machine or other
