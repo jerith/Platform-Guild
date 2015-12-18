@@ -10,7 +10,7 @@ production systems.
 
 
 Goals
------
+=====
 
 Our goal is to download and install an interpreter (which we'll use to
 run and develop our code), to install and configure a way to isolate
@@ -27,7 +27,7 @@ Bullet version:
 
 
 Interpreters
-------------
+============
 
 Most \*nix operating systems, including Linux and OS X, come with an
 installed Python interpreter because Python is often used by the system.
@@ -63,7 +63,7 @@ PyPy.
 
 
 PyPy
-----
+====
 
 .. todo:: Probably deserves elaboration as its own topic
 
@@ -105,7 +105,7 @@ how PyPy is deployed to our production systems.
 
 
 Avoiding Common Gotchas
------------------------
+=======================
 
 .. seealso::
 
