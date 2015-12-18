@@ -101,3 +101,13 @@ how PyPy is deployed to our production systems.
     Each PyPy release implements a specific version of Python *the language*.
 
     For instance, PyPy 4.0.1 implements Python 2.7.11.
+
+
+Avoiding Common Gotchas
+-----------------------
+
+.. seealso::
+
+    This section concerns a number of common development environment
+    gotchas. `Language Tips & Gotchas` has some more general
+    information on possible hiccups.
