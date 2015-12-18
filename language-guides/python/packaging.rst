@@ -64,7 +64,7 @@ slight modification and addition:
 requirements.txt
 ================
 
-:file:`requirements.txt`_ (and other similarly named files) are mechanisms for
+:file:`requirements.txt` (and other similarly named files) are mechanisms for
 specifying *deployment environments* -- i.e., they delineate a *fixed* or
 "almost" fixed set of package versions that are known-working for the
 associated package.
