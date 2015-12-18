@@ -18,7 +18,7 @@ Some reasons for each deprecation are included below.
 
 
 CPython
--------
+=======
 
 Use of the CPython interpreter has generally been deprecated in the
 platform. New projects are encouraged to use **`PyPy`**, and existing
@@ -32,7 +32,7 @@ Explanation
 
 
 Chef
-----
+====
 
 `Chef <https://www.chef.io/chef/get-chef/>`_ was previously used as
 the configuration management system for platform components (and
@@ -51,7 +51,7 @@ Explanation
 
 
 Vagrant
--------
+=======
 
 Use of `vagrant <https://www.vagrantup.com/>`_ is discouraged for new
 and old platform components. Developers are *strongly encouraged* to
@@ -67,16 +67,16 @@ Explanation
 * Poor backwards compatibility, and general "version hell" when setting up
   vagrant on new developer machines
 * Poor story for provisioning VMs -- Berkshelf was previously used to inject
-  cookbooks into VMs for use by `Chef`, but is similarly deprecated and
+  cookbooks into VMs for use by `Chef`_, but is similarly deprecated and
   discouraged. The berkshelf plugin for vagrant was a consistent source of
   frustration due to the above compatibility concerns.
 * Encourages better, self-contained applications for faster development
-* VMs were not in-sync with Chef cookbooks used for deployment to real
+* VMs were not in-sync with `Chef`_ cookbooks used for deployment to real
   machines, leading to multiple divergent provisioning scripts
 
 
 Direct DB Querying
-------------------
+==================
 
 Applications are discouraged from making direct connections to the UI database
 (or other shared databases) in favor of accessing configuration data via a
@@ -91,10 +91,10 @@ Explanation
 
 
 Non-conformant Python Package Layouts
--------------------------------------
+=====================================
 
 Python packages that do not follow the suggested layout proposed in `Packaging
-Python Projects` are candidates for reshuffling.
+Python Projects`_ are candidates for reshuffling.
 
 Explanation
 ###########

@@ -36,9 +36,9 @@ Packaging Python Projects
             * a `setup.py`
 
         And may also contain:
-            * a `requirements.txt` specifying its requirements
+            * a `requirements.txt`_ specifying its requirements
             * a `deployment script <Deploying Applications>`_
-            * a `MANIFEST.in` containing additional package data to include
+            * a `MANIFEST.in`_ containing additional package data to include
               when building distributions of the package
             * development-focused provisioning of a virtual machine or other
               locally-runnable, fully integrated deployment of the package
@@ -53,7 +53,7 @@ For packaging Python projects (new and old), follow the guidelines outlined in
 <http://blog.habnab.it/blog/2013/07/21/python-packages-and-you/>`_ with only
 slight modification and addition:
 
-* Always use `setuptools` when writing a `setup.py` (mentioned in the
+* Always use `setuptools`_ when writing a `setup.py`_ (mentioned in the
   article as a suitable alternative, but setuptools is now more mature and
   better maintained than it was).
 * Avoid ``if __name__ == "__main__"`` blocks in modules in favor of an explicit
@@ -64,7 +64,7 @@ slight modification and addition:
 requirements.txt
 ================
 
-:file:`requirements.txt` (and other similarly named files) are mechanisms for
+:file:`requirements.txt`_ (and other similarly named files) are mechanisms for
 specifying *deployment environments* -- i.e., they delineate a *fixed* or
 "almost" fixed set of package versions that are known-working for the
 associated package.
@@ -102,8 +102,9 @@ Each binary should have its executable bit set (via :command:`chmod
 
 It is recommended that they *not* have file extensions.
 
-Scripts must contain a shebang line, and it is strongly recommended that the
-shebang line be ``#! /usr/bin/env python`` so that `virtualenv`\ s are respected.
+Scripts must contain a shebang line, and it is strongly recommended that
+the shebang line be ``#! /usr/bin/env python`` so that `virtualenv`\ s
+are respected.
 
 .. note::
 
@@ -112,7 +113,7 @@ shebang line be ``#! /usr/bin/env python`` so that `virtualenv`\ s are respected
     (the one used to perform the installation).
 
 Each binary to install should also appear in the scripts argument in the
-package's `setup.py` so that it is installed along with the package.
+package's `setup.py`_ so that it is installed along with the package.
 
 You can use
 
@@ -134,8 +135,8 @@ to automatically include all scripts in the :file:`bin/` directory.
 .. note::
 
     Do *not* use absolute paths to scripts in the `setup.py`, since
-    unfortunately `setuptools` requires them to be relative to the `setup.py` /
-    `repository root`.
+    unfortunately `setuptools`_ requires them to be relative to the
+    `setup.py`_ / `repository root`_.
 
 It is occasionally also useful to split scripts into two categories and
 place each category of scripts in its own folder:
