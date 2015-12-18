@@ -107,7 +107,7 @@ pygments_style = 'sphinx'
 todo_include_todos = False
 
 intersphinx_mapping = {
-    "packaging": ("https://packaging.python.org/en/latest/glossary/", None),
+    "packaging": ("https://packaging.python.org/en/latest/", None),
     "python": ("http://docs.python.org/2.7", None),
     "setuptools": ("http://pythonhosted.org/setuptools/", None),
 }
