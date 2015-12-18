@@ -47,8 +47,9 @@ manager, or worse with dependencies of the operating system itself.
 For these reasons, we recommend installing a non-system Python
 installation to do development with.
 
-On OS X, ``brew install python`` via `Homebrew` will install the latest
-(C)Python to a user-writeable location. However, see below about PyPy.
+On OS X, :command:`brew install python` via `Homebrew`_ will install the
+latest (C)Python to a user-writeable location. However, see below about
+PyPy.
 
 .. seealso::
 
@@ -85,7 +86,7 @@ It is used extensibly in our production environment.
 The PyPy `download page <http://pypy.org/download.html>`_ contains
 installation instructions for a number of operating systems.
 
-On OS X, ``brew install pypy`` via `Homebrew` will install
+On OS X, :command:`brew install pypy` via `Homebrew`_ will install
 the latest release of PyPy. On Linux, using `Portable PyPy
 <https://github.com/squeaky-pl/portable-pypy>`_ is recommended, which is
 how PyPy is deployed to our production systems.
@@ -109,5 +110,5 @@ Avoiding Common Gotchas
 .. seealso::
 
     This section concerns a number of common development environment
-    gotchas. `Language Tips & Gotchas` has some more general
+    gotchas. `Language Tips & Gotchas`_ has some more general
     information on possible hiccups.
