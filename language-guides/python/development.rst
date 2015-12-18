@@ -112,3 +112,12 @@ Avoiding Common Gotchas
     This section concerns a number of common development environment
     gotchas. `Language Tips & Gotchas`_ has some more general
     information on possible hiccups.
+
+
+Further Reading
+===============
+
+.. seealso::
+
+    `testing` for some guidance on setting up an environment suitable for
+    running test suites
