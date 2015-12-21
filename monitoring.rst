@@ -31,4 +31,4 @@ Statistical Profiling
 
 .. seealso::
 
-    * `strace`_
+    * `strace`

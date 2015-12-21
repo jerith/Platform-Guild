@@ -2,6 +2,8 @@
 Commonly Useful Software
 ========================
 
+.. _homebrew:
+
 Homebrew
 --------
 
@@ -22,3 +24,8 @@ git
 
 par
 ---
+
+.. _strace:
+
+strace
+------

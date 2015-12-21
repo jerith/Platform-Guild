@@ -2,6 +2,11 @@
 Packaging Python Projects
 =========================
 
+.. seealso::
+
+    `The PyPA documentation on distributions
+    <https://packaging.python.org/en/latest/distributing/#configuring-your-project>`_
+
 .. glossary::
     module
         1) used loosely to mean `source file`
@@ -20,7 +25,7 @@ Packaging Python Projects
 
             .. seealso::
 
-                `More on Scripts & Binaries`_
+                `scripts-and-binaries`_
 
     package
         A directory containing a :file:`__init__.py` along with
@@ -33,13 +38,15 @@ Packaging Python Projects
         It should contain at minimum:
             * a README
             * one (or more) packages
-            * a `setup.py`_
+            * a :term:`setup.py`
 
         And may also contain:
-            * a `requirements.txt`_ specifying its requirements
-            * a `deployment`_ script
-            * a `MANIFEST.in`_ containing additional package data to include
-              when building distributions of the package
+            * a :term:`requirements file`
+            * a :doc:`deployment </deployment>` script
+            * a `MANIFEST.in
+              <https://packaging.python.org/en/latest/distributing/?highlight=manifest#manifest-in>`_
+              containing additional package
+              data to include when building distributions of the package
             * development-focused provisioning of a virtual machine or other
               locally-runnable, fully integrated deployment of the package
               along with any needed databases or hard dependencies
@@ -53,7 +60,7 @@ For packaging Python projects (new and old), follow the guidelines outlined in
 <http://blog.habnab.it/blog/2013/07/21/python-packages-and-you/>`_ with only
 slight modification and addition:
 
-* Always use `setuptools`_ when writing a `setup.py`_ (mentioned in the
+* Always use `setuptools` when writing a `setup.py` (mentioned in the
   article as a suitable alternative, but setuptools is now more mature and
   better maintained than it was).
 * Avoid ``if __name__ == "__main__"`` blocks in modules in favor of an explicit
@@ -102,6 +109,8 @@ requirements, rather than duplicating them.
     use of the host OS's package manger.
 
 
+.. _scripts-and-binaries:
+
 More on Scripts & Binaries
 ==========================
 
@@ -127,7 +136,7 @@ are respected.
     (the one used to perform the installation).
 
 Each binary to install should also appear in the scripts argument in the
-package's `setup.py`_ so that it is installed along with the package.
+package's `setup.py` so that it is installed along with the package.
 
 You can use
 
@@ -148,9 +157,9 @@ to automatically include all scripts in the :file:`bin/` directory.
 
 .. note::
 
-    Do *not* use absolute paths to scripts in the `setup.py`_, since
-    unfortunately `setuptools`_ requires them to be relative to the
-    `setup.py`_ / :term:`repository root`.
+    Do *not* use absolute paths to scripts in the `setup.py`, since
+    unfortunately `setuptools` requires them to be relative to the
+    `setup.py` / :term:`repository root`.
 
 It is occasionally also useful to split scripts into two categories and
 place each category of scripts in its own folder:

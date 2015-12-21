@@ -93,8 +93,8 @@ Explanation
 Non-conformant Python Package Layouts
 =====================================
 
-Python packages that do not follow the suggested layout proposed in `Packaging
-Python Projects`_ are candidates for reshuffling.
+Python packages that do not follow the suggested layout proposed in
+`packaging` are candidates for reshuffling.
 
 Explanation
 ###########

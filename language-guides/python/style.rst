@@ -5,4 +5,5 @@ Style Guidelines
 API Documentation
 -----------------
 
-`Sphinx` is the tool of choice for writing API documentation.
+`Sphinx <https://sphinx.readthedocs.org/en/latest/index.html>`_ is the
+tool of choice for writing API documentation.
