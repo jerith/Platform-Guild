@@ -68,6 +68,9 @@ slight modification and addition:
   <https://pythonhosted.org/setuptools/setuptools.html#automatic-script-creation>`_.
 
 
+.. _requirements.txt:
+
+
 requirements.txt
 ================
 

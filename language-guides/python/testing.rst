@@ -41,6 +41,12 @@ project.
 
 .. note::
 
+    Running tests for a project often requires an additional set of
+    `requirements <requirements.txt>` which should first be installed
+    via ``pip install -r test-requirements.txt`` when present.
+
+.. note::
+
     Executing tests, at least via :program:`trial`, does *not* require
     being in the same directory as the package, but generally *should*
     be done after first installing the package to be tested, typically
