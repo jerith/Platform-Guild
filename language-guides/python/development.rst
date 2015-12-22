@@ -104,6 +104,18 @@ how PyPy is deployed to our production systems.
     For instance, PyPy 4.0.1 implements Python 2.7.11.
 
 
+virtualenv
+==========
+
+
+Debuggers
+=========
+
+
+Profilers
+=========
+
+
 Avoiding Common Gotchas
 =======================
 
