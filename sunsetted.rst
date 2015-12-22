@@ -95,7 +95,7 @@ Non-conformant Python Package Layouts
 =====================================
 
 Python packages that do not follow the suggested layout proposed in
-`packaging` are candidates for reshuffling.
+:doc:`language-guides/python/packaging` are candidates for reshuffling.
 
 Explanation
 ###########
