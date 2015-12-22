@@ -51,6 +51,14 @@ project.
     `packaging`
         Guidelines for how to structure the package layout of a project.
 
+    `green <https://pypi.python.org/pypi/green>`_
+        An alternative test runner similar to :program:`trial`.
+
+    `py.test <http://pytest.org/latest/>`_
+        A test runner somewhat different from :program:`trial`, which
+        includes (is built around) an alternate test framework but which
+        can run `unittest` test suites as well.
+
 Tox
 ---
 
