@@ -20,9 +20,10 @@ Some reasons for each deprecation are included below.
 CPython
 =======
 
-Use of the CPython interpreter has generally been deprecated in the
-platform. New projects are encouraged to use **`PyPy`**, and existing
-projects are encouraged to move to PyPy if they are compute-intensive.
+Use of the CPython interpreter has generally been deprecated
+in the platform. New projects are encouraged to use `PyPy
+<http://www.pypy.org>`_, and existing projects are encouraged to move to
+PyPy if they are compute-intensive.
 
 Explanation
 ############
