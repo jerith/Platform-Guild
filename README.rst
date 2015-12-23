@@ -10,7 +10,7 @@ Contents:
    :maxdepth: 2
 
    *
-   language-guides/python/*
+   language-guides/python/index.rst
 
 
 The `Magnetic <http://www.magnetic.com>`_ platform guild is an Engineering
