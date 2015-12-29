@@ -64,8 +64,8 @@ The guild therefore *strongly encourages* but does not mandate
 pre-review by the author of a code review.
 
 
-Style
-=====
+Style & Static Checkers
+=======================
 
 
 Does Pair Programming Substitute?
