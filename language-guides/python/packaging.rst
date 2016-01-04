@@ -112,6 +112,41 @@ requirements, rather than duplicating them.
     use of the host OS's package manger.
 
 
+.. _versioning:
+
+
+Versioning
+================
+
+For automated versioning the recommended package is `vcversioner <https://pypi.python.org/pypi/vcversioner/>`.
+
+Basically, the software will use the system's version control in order to manage versioning.  
+
+
+Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example, the following changes are required in order to use vcversioner.
+
+* Add vcversioner to :file:`setup.py` required packages list and as a hook with key pointing to version file
+  .. code-block:: python
+
+        setup(
+            name="exchanges",
+            setup_requires=["vcversioner"],
+            ... 
+            vcversioner={"version_module_paths": ["exchanges/_version.py"]},
+        )
+
+
+* Alter :file:`__init__.py` file in the projects source code package e.g. :file:`Exchanges/exchanges` where :file:`Exchanges` is repo root as defined in the top of this file. 
+  .. code-block:: python
+  
+  from exchanges._version import __version__
+  
+
+* intialize a first version manually. E.g. In git repo run something like: 
+  $ git tag -a v0.0.1 -m "Creating first version"
+
+
+
 .. _scripts-and-binaries:
 
 More on Scripts & Binaries
