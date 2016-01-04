@@ -35,8 +35,9 @@ Collectively!
 Guild meetings, email chains, IRC, Slack and hallway meetings are all
 appropriate forums for improving our principles and policies.
 
-Disagree with an existing principle, guideline, or policy? Send a pull
-request to change it!
+Have an improvement to make to the documentation? Disagree with an
+existing principle, guideline, or policy? Change it! These documents live `on
+GitHub <https://github.com/Magnetic/Platform-Guild>`_.
 
 
 About This Repo
