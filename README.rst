@@ -3,11 +3,12 @@ The Magnetic Platform Guild
 ===========================
 
 
-The `Magnetic <http://www.magnetic.com>`_ platform guild is an Engineering
-interest group for developers of high throughput, real-time systems.
+The :dfn:`Magnetic Platform Guild` is an Engineering :dfn:`guild`
+(interest group) for developers of high throughput, real-time systems at
+`Magnetic <http://www.magnetic.com>`_.
 
-This repository collects some of our recommendations (for each other) within
-our areas of interest.
+This repository collects some of our recommendations for each other
+within our areas of interest & expertise.
 
 
 `Our manifesto`_ describes some of our high level principles and directives.
@@ -49,4 +50,6 @@ Some effort has been expended to make the surrounding prose in these instances
 understandable in isolation.
 
 Please forgive inaccuracies or poor wording, as these documents are
-continuously evolving.
+continuously evolving. Our initial goals prefer breadth of content
+over depth, so terseness, brevity, or incompleteness are especially
+prevalent.
