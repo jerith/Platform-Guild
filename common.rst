@@ -22,3 +22,12 @@ Software should be:
 Software should also follow the spirit of our `Engineering Manifesto
 <https://docs.google.com/presentation/d/1GUF84m4XV3aQtrE1PVHsSzeEgSQ3zaxJOS5xHj9RLn0/edit#slide=id.gc7987cad8_0_12>`_
 which documents our values as a department.
+
+
+.. seealso::
+
+    Dan Luu - How Completely Messed Up Practices Become Normal
+        `<http://danluu.com/wat/>`_
+
+    The End Of Object Inheritance & The Beginning Of A New Modularity
+        `<https://www.youtube.com/watch?v=3MNVP9-hglc>`_
