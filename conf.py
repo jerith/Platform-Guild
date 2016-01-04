@@ -132,14 +132,14 @@ html_theme = 'alabaster'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "The Magnetic Platform Guild"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "static/img/plus-one-logo.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -214,6 +214,10 @@ html_static_path = ['static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'TheMagneticPlatformGuilddoc'
 
+html_context = {
+    "css_files": ["_static/css/overrides.css"],
+}
+
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
@@ -234,8 +238,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'TheMagneticPlatformGuild.tex', u'The Magnetic Platform Guild Documentation',
-   u'Platform-Guild@Magnetic.com', 'manual'),
+    (
+        master_doc,
+        "TheMagneticPlatformGuild.tex",
+        html_title.decode("ascii"),
+        u"Platform-Guild@Magnetic.com",
+        "manual",
+    ),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
