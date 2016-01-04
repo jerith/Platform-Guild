@@ -142,8 +142,11 @@ Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example
   from exchanges._version import __version__
   
 
-* intialize a first version manually. E.g. In git repo run something like: 
+* initialize a first version manually. E.g. In git repo run something like: 
   $ git tag -a v0.0.1 -m "Creating first version"
+  
+* Verify that it all works well
+  $ python setup.py install 
 
 
 
