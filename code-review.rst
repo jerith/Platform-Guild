@@ -23,9 +23,9 @@ Distilled, a code review should focus on ensuring that the proposed new
 code is *correct*, *simple*, *maintainable*, *tested* and *working as
 intended*.
 
-
-Knowledge Dissemination
-=======================
+A *secondary* goal of code review is to disseminate knowledge of changes
+and the codebase in general throughout the guild, but when in conflict
+with its primary goal, we consider this goal to be... secondary.
 
 
 How Many Reviewers?
