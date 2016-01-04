@@ -9,20 +9,30 @@ Goals
 The code review process, in principle and practice, is designed to identify
 *defects*.
 
-A :dfn:`code reviewer` is tasked with uncovering, amongst others:
+A :dfn:`code reviewer` is tasked with uncovering issues that may have
+been missed during the initial implementation by the :dfn:`author` of
+the changeset.
 
-* bugs in the implementation presented that the :dfn:`author` may have missed
-* suboptimal implementations that may present maintenance issues going forward
-* gaps in error handling, edge cases, monitoring, testing or reliability
-* implementations that do not fit well with existing code in the repository, or
-  across the guild
+The perspective offered by a code review offers feedback to the author
+for each uncovered issue, where issues may be anything from buggy
+implementations, unintentional interactions with existing code, threats
+to future maintainability of the codebase, or gaps in error handling,
+monitoring and reliability.
 
 Distilled, a code review should focus on ensuring that the proposed new code
 is *correct*, *simple*, *maintainable*, *tested* and *working as intended*.
 
 
+Knowledge Dissemination
+=======================
+
+
 How Many Reviewers?
 ===================
+
+
+Who Should Be a Reviewer?
+=========================
 
 
 Commits vs. Diffs
