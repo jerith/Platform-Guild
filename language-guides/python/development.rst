@@ -48,13 +48,13 @@ For these reasons, we recommend installing a non-system Python
 installation to do development with.
 
 On OS X, :command:`brew install python` via `Homebrew` will install the
-latest (C)Python to a user-writeable location. However, see below about
-PyPy.
+latest (C)Python to a user-writeable location.
 
 .. seealso::
 
-    PyPy below for installation of a separate interpreter used by many
-    production compnents.
+    `PyPy` below for installation of a separate interpreter used by many
+    production compnents. Its use has especially succeeded CPython for
+    any new projects.
 
 .. note::
 
@@ -62,12 +62,14 @@ PyPy.
     2.7.X, which as of December 2015 is currently 2.7.11.
 
 
+.. _PyPy:
+
 PyPy
 ====
 
-.. todo:: Probably deserves elaboration as its own topic
+.. todo:: Probably deserves to be extracted out
 
-`PyPy <http://pypy.org/>`_ is a Python interpreter, distinct from
+`PyPy <http://pypy.org/>`__ is a Python interpreter, distinct from
 `CPython <https://en.wikipedia.org/wiki/CPython>`_, that offers
 significant speed and memory benefits (amongst others), allowing Python
 to compete more fairly with the performance of "fully precompiled"
