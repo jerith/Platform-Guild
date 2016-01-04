@@ -31,3 +31,6 @@ which documents our values as a department.
 
     The End Of Object Inheritance & The Beginning Of A New Modularity
         `<https://www.youtube.com/watch?v=3MNVP9-hglc>`_
+
+    Greg Wilson - What We Actually Know About Software Development, and Why We Believe It's True
+        `<https://vimeo.com/9270320>`_
