@@ -3,16 +3,6 @@ The Magnetic Platform Guild
 ===========================
 
 
-Contents:
-
-.. toctree::
-   :glob:
-   :maxdepth: 2
-
-   *
-   language-guides/python/index.rst
-
-
 The `Magnetic <http://www.magnetic.com>`_ platform guild is an Engineering
 interest group for developers of high throughput, real-time systems.
 
@@ -23,6 +13,17 @@ our areas of interest.
 `Our manifesto`_ describes some of our high level principles and directives.
 
 .. _Our manifesto: https://docs.google.com/document/d/1o5Yu2PuGWl_Bo46LYAk6aUDpS2JHJvVK1P05uGIM9yM/
+
+
+Contents
+--------
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+
+   *
+   language-guides/python/index.rst
 
 
 How Are Guild Principles Decided?
