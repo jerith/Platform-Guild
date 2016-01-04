@@ -52,7 +52,7 @@ latest (C)Python to a user-writeable location.
 
 .. seealso::
 
-    `PyPy` below for installation of a separate interpreter used by many
+    :ref:`PyPy` below for installation of a separate interpreter used by many
     production compnents. Its use has especially succeeded CPython for
     any new projects.
 
@@ -135,3 +135,33 @@ Further Reading
 
     `testing-environment` for some guidance on setting up an environment
     suitable for running test suites.
+
+
+Glossary
+========
+
+.. glossary::
+
+    PyPy
+        A Python interpreter implemented in `RPython`, distinct from `CPython`.
+
+        .. seealso::
+
+            :ref:`PyPy`
+
+            http://pypy.org
+                The PyPy homepage
+
+    CPython
+        A Python interpreter implemented in C. CPython is the implementation
+        that ships with many operating systems, and generally is what is
+        referred to when "Python" is used in an unqualified sense.
+
+    RPython
+        *Restricted* Python, a (valid, strict) subset of Python used
+        to implement :term:`PyPy` (and other implementations of other
+        languages) due to the features of the RPython toolchain, which
+        include the ability to leverage a set of existing garbage
+        collector implementations, a JIT compiler generator, and other
+        useful tools for implementation of programming languages. See
+        the :term:`PyPy` documentation for more details.
