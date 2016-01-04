@@ -19,8 +19,9 @@ implementations, unintentional interactions with existing code, threats
 to future maintainability of the codebase, or gaps in error handling,
 monitoring and reliability.
 
-Distilled, a code review should focus on ensuring that the proposed new code
-is *correct*, *simple*, *maintainable*, *tested* and *working as intended*.
+Distilled, a code review should focus on ensuring that the proposed new
+code is *correct*, *simple*, *maintainable*, *tested* and *working as
+intended*.
 
 
 Knowledge Dissemination
