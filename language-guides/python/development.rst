@@ -122,7 +122,8 @@ To get started (tested with Thidwick, Vagrant 1.7.4, Chef DK 0.10.0 and VirtualB
 
 #. Install `ChefDK <https://downloads.chef.io/chef-dk>`_. For easy integration with Vagrant plugins, add this line to
    your ~/.profile file::
-      $ eval "$(chef shell-init bash)"
+
+   	$ eval "$(chef shell-init bash)"
    
    This will change your environment so the ChefDK ruby is used instead of the system-wide installation. 
    It should be possible to configure system-wide ruby to work with vagrant plugins - if you know how to do that, 
@@ -130,10 +131,12 @@ To get started (tested with Thidwick, Vagrant 1.7.4, Chef DK 0.10.0 and VirtualB
    
 #. Navigate to the *vm* directory
 #. Install vagrant plugins::
-     $ vagrant plugin install berkshelf chef
+
+   	   $ vagrant plugin install berkshelf chef
 
 #. Launch the VM::
-     $ vagrant up
+
+   	  $ vagrant up
 
    This will download and save the base image, and run chef to automatically
    configure the VM. If you are prompted to select a network adapter for
