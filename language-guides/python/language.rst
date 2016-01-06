@@ -125,11 +125,11 @@ of `tuple`\ s, and specifically of `__slots__`. However, defining
 applied in the usual way -- after benchmarks have been written).
 
 So about the noble goal of terseness? For this reason, libraries like
-`characteristic` exist -- as ways of decreasing the lines of boilerplate
-necessary to define a class with a number of "characteristic" fields or
-attributes, and upon which things like comparisons are defined fairly
-"trivially". Guild members are encouraged to use these libraries when value
-classes are desired.
+`characteristic <http://characteristic.readthedocs.org/en/stable/>`_ exist --
+as ways of decreasing the lines of boilerplate necessary to define a class with
+a number of "characteristic" fields or attributes, and upon which things like
+comparisons are defined fairly "trivially". Guild members are encouraged to use
+these libraries when value classes are desired.
 
 .. seealso::
 
