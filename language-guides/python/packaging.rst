@@ -4,7 +4,7 @@ Packaging Python Projects
 
 .. seealso::
 
-    `The PyPA documentation on distributions
+    `The PyPA documentation on `distributions <distribution package>`
     <https://packaging.python.org/en/latest/distributing/#configuring-your-project>`_
 
 .. glossary::
@@ -45,8 +45,9 @@ Packaging Python Projects
             * a :doc:`deployment </deployment>` script
             * a `MANIFEST.in
               <https://packaging.python.org/en/latest/distributing/?highlight=manifest#manifest-in>`_
-              containing additional package
-              data to include when building distributions of the package
+              containing additional package data to include when
+              building `distributions <distribution package>` of the
+              package
             * development-focused provisioning of a virtual machine or other
               locally-runnable, fully integrated deployment of the package
               along with any needed databases or hard dependencies
@@ -117,49 +118,59 @@ requirements, rather than duplicating them.
 Versioning
 ==========
 
-Versioning a Python package is functionality that is generally managed
-by `setuptools` during installations of `distributions`. A version is
-provided to `setuptools.setup` which tells setuptools what version is
-being installed (which it uses to decide on ordering of versions, etc.).
+Mechanisms
+----------
 
-As a separate but important concern, occasionally developers wish to
-know "which version of a particular module or package is currently
-installed or imported" from within a `REPL`. This use case makes having
-the version information easily accessible at runtime an important
-consideration.
+Versioning a Python package is functionality that is generally managed
+by `setuptools` during installations of `distributions <distribution
+package>`. A version is provided to :func:`setuptools.setup` which tells
+setuptools what version is being installed (which it uses to decide on
+ordering of versions, etc.).
+
+As a separate but important concern, occasionally developers
+wish to know "which version of a particular module or package
+is currently installed or imported" from within a `REPL
+<https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_.
+This use case makes having the version information easily accessible at
+runtime an important consideration.
 
 There are many ways to solve both use cases, the most basic of
 which is to duplicate the version information as a parameter to
-`setuptools.setup`, and again within a module in the package such that
-the version is available at runtime.
+:func:`setuptools.setup`, and again within a module in the package such
+that the version is available at runtime.
 
 A slightly DRYer approach is to import the version from within the
 package and to use that when running `setuptools`, but there are a
 number of gotchas to this approach, particularly because it conflates
 the build and install process with the *installed* state of a package
 -- i.e., to import the version from within `setuptools`, the module
-containing the version must have *no external dependencies*.
+containing the version must have *no dependencies, either internal or
+external*, since any dependencies will cause potential import issues
+when run on a not-yet-installed package.
 
-Also worth noting is that version information is often duplicated in an
-*external* place -- inside the `VCS`. For these reasons and others, the guild
-recommendation is to use a package called `vcversioner`, whose job it is to
-*expose VCS versions into both places discussed above such that versions are
-specified in exactly one place*.
+Also worth noting is that version information is often duplicated in
+an *external* place -- inside the version control system. For these
+reasons and others, the guild recommendation is to use a package called
+`vcversioner`, whose job it is to *expose VCS versions into both places
+discussed above such that versions are specified in exactly one place*.
 
 Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example, the following changes are required in order to use vcversioner.
 
-* Add vcversioner to :file:`setup.py` required packages list and as a hook with key pointing to version file
+* Add vcversioner to :file:`setup.py` required packages list and as a
+  hook with key pointing to version file
+
   .. code-block:: python
 
         setup(
             name="exchanges",
+            ...
             setup_requires=["vcversioner"],
-            ... 
             vcversioner={"version_module_paths": ["exchanges/_version.py"]},
         )
 
-
-* Alter :file:`__init__.py` file in the projects source code package e.g. :file:`Exchanges/exchanges` where :file:`Exchanges` is repo root as defined in the top of this file. 
+* Alter :file:`__init__.py` file in the projects source code package
+  e.g. :file:`Exchanges/exchanges` where :file:`Exchanges` is repo root as
+  defined in the top of this file.
 
   .. code-block:: python
   
@@ -171,6 +182,16 @@ Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example
 * Verify that it all works well
   $ python setup.py install 
 
+
+Numbering Schemes
+-----------------
+
+Separate from the issue of exposing versioning information is a choice of
+*which* numbers to use and how to manage them over time.
+
+For reasons of consistency, the general recommendation is to elect to
+use `SemVer <http://semver.org/>`_ unless there are significant reasons
+for a change.
 
 
 .. _scripts-and-binaries:
