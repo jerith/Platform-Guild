@@ -89,6 +89,7 @@ pygments_style = "sphinx"
 todo_include_todos = False
 
 intersphinx_mapping = {
+    "characteristic": ("https://characteristic.readthedocs.org/en/latest/", None),
     "hitchhiker": ("https://python-guide.readthedocs.org/en/latest/", None),
     "packaging": ("https://packaging.python.org/en/latest/", None),
     "python": ("https://docs.python.org/2.7", None),

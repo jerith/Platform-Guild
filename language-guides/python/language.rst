@@ -116,3 +116,8 @@ of `tuple`\ s, and specifically of `__slots__`. However, defining
 <http://morepypy.blogspot.ca/2010/11/efficiently-implementing-python-objects.html>`_.
 (Its use on `CPython` is an optimization which should be
 applied in the usual way -- after benchmarks have been written).
+
+.. seealso::
+
+    :ref:`Why Not... <characteristic:why>`
+        Similar arguments proposed in the :mod:`characteristic` documentation
