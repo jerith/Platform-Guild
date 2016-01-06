@@ -114,14 +114,37 @@ requirements, rather than duplicating them.
 
 .. _versioning:
 
-
 Versioning
-================
+==========
 
-For automated versioning the recommended package is `vcversioner <https://pypi.python.org/pypi/vcversioner/>`.
+Versioning a Python package is functionality that is generally managed
+by `setuptools` during installations of `distributions`. A version is
+provided to `setuptools.setup` which tells setuptools what version is
+being installed (which it uses to decide on ordering of versions, etc.).
 
-Basically, the software will use the system's version control in order to manage versioning.  
+As a separate but important concern, occasionally developers wish to
+know "which version of a particular module or package is currently
+installed or imported" from within a `REPL`. This use case makes having
+the version information easily accessible at runtime an important
+consideration.
 
+There are many ways to solve both use cases, the most basic of
+which is to duplicate the version information as a parameter to
+`setuptools.setup`, and again within a module in the package such that
+the version is available at runtime.
+
+A slightly DRYer approach is to import the version from within the
+package and to use that when running `setuptools`, but there are a
+number of gotchas to this approach, particularly because it conflates
+the build and install process with the *installed* state of a package
+-- i.e., to import the version from within `setuptools`, the module
+containing the version must have *no external dependencies*.
+
+Also worth noting is that version information is often duplicated in an
+*external* place -- inside the `VCS`. For these reasons and others, the guild
+recommendation is to use a package called `vcversioner`, whose job it is to
+*expose VCS versions into both places discussed above such that versions are
+specified in exactly one place*.
 
 Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example, the following changes are required in order to use vcversioner.
 
@@ -137,10 +160,10 @@ Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example
 
 
 * Alter :file:`__init__.py` file in the projects source code package e.g. :file:`Exchanges/exchanges` where :file:`Exchanges` is repo root as defined in the top of this file. 
+
   .. code-block:: python
   
   from exchanges._version import __version__
-  
 
 * initialize a first version manually. E.g. In git repo run something like: 
   $ git tag -a v0.0.1 -m "Creating first version"
