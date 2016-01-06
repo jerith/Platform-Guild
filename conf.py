@@ -94,6 +94,7 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/2.7", None),
     "setuptools": ("https://pythonhosted.org/setuptools/", None),
     "sphinx": ("https://sphinx.readthedocs.org/en/latest/", None),
+    "vcversioner": ("https://vcversioner.readthedocs.org/en/latest/", None),
 }
 
 

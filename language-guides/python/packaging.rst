@@ -154,7 +154,8 @@ reasons and others, the guild recommendation is to use a package called
 `vcversioner`, whose job it is to *expose VCS versions into both places
 discussed above such that versions are specified in exactly one place*.
 
-Using the `Exchanges <https://github.com/Magnetic/Exchanges>` repo as an example, the following changes are required in order to use vcversioner.
+Using the `Exchanges <https://github.com/Magnetic/Exchanges>`_ repo as an
+example, the following changes are required in order to use vcversioner.
 
 * Add vcversioner to :file:`setup.py` required packages list and as a
   hook with key pointing to version file
