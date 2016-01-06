@@ -102,4 +102,4 @@ Explanation
 
 * Besides the benefits elaborated on in the aformentioned article, uniformity
   of package and repository layout eases the burden for installation and
-  provisioning
+  provisioning.
