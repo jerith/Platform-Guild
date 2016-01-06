@@ -105,6 +105,13 @@ Great, so far so good.
 
 Ouch.
 
+The explanation for the above is that :func:`~collections.namedtuple`\ s are
+first and foremost, *tuples*. They will degrade into tuples for comparisons,
+and field names are strictly for readability -- they assign names to ultimately
+*positional* components. Introducing the concept of positionality to a fresh,
+new class is not often intentional -- an arbitrary class' fields should not be
+orderable in some arbitrary order.
+
 This gotcha is also an illustrative example of the dangers of
 inheritance in general, and more specifically of the dangers of overly
 loose type comparisons.
@@ -116,6 +123,13 @@ of `tuple`\ s, and specifically of `__slots__`. However, defining
 <http://morepypy.blogspot.ca/2010/11/efficiently-implementing-python-objects.html>`_.
 (Its use on `CPython` is an optimization which should be
 applied in the usual way -- after benchmarks have been written).
+
+So about the noble goal of terseness? For this reason, libraries like
+`characteristic` exist -- as ways of decreasing the lines of boilerplate
+necessary to define a class with a number of "characteristic" fields or
+attributes, and upon which things like comparisons are defined fairly
+"trivially". Guild members are encouraged to use these libraries when value
+classes are desired.
 
 .. seealso::
 
