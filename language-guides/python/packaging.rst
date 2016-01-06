@@ -154,11 +154,12 @@ reasons and others, the guild recommendation is to use a package called
 `vcversioner`, whose job it is to *expose VCS versions into both places
 discussed above such that versions are specified in exactly one place*.
 
-Using the `Exchanges <https://github.com/Magnetic/Exchanges>`_ repo as an
-example, the following changes are required in order to use vcversioner.
-
-* Add vcversioner to :file:`setup.py` required packages list and as a
-  hook with key pointing to version file
+* Add `vcversioner` to the repository's :file:`setup.py` as a *setup*
+  dependency (i.e. one needed to run the setup via :code:`setup_requires`, not
+  at install time via :code:`install_requires` where `vcversioner` is not
+  required). An additional parameter is required to tell `vcversioner` which
+  module to generate the version inside of, for which the recommended name is
+  :file:`{package}/_version.py`:
 
   .. code-block:: python
 
@@ -169,19 +170,22 @@ example, the following changes are required in order to use vcversioner.
             vcversioner={"version_module_paths": ["exchanges/_version.py"]},
         )
 
-* Alter :file:`__init__.py` file in the projects source code package
-  e.g. :file:`Exchanges/exchanges` where :file:`Exchanges` is repo root as
-  defined in the top of this file.
+* Alter :file:`{package}/__init__.py` the `repository root` to expose the
+  version at runtime for the installed version of the package by adding
+  :samp:`from {package}._version import __version__` to it.
 
-  .. code-block:: python
-  
-  from exchanges._version import __version__
+* Create an initial version with or without any concrete contents:
 
-* initialize a first version manually. E.g. In git repo run something like: 
-  $ git tag -a v0.0.1 -m "Creating first version"
+    $ git tag -a v0.1.0 -m "Create a first version"
   
-* Verify that it all works well
-  $ python setup.py install 
+* Test the installation by attempting to install the package with `pip`:
+
+    $ pip install --user .
+
+An example can be found in many existing GitHub repositories within the
+Magnetic organization, including e.g. `Pier <https://github.com/Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29>`_
+
+See the `vcversioner` documentation for more details.
 
 
 Numbering Schemes
