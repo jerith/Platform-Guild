@@ -124,7 +124,12 @@ of `tuple`\ s, and specifically of `__slots__`. However, defining
 (Its use on `CPython` is an optimization which should be
 applied in the usual way -- after benchmarks have been written).
 
-So about the noble goal of terseness? For this reason, libraries like
+For these reasons, the use of :func:`~collections.namedtuple` is appropriate
+only to convert an *existing* API that returned tuples into one that preserves
+backwards compatibility but which returns more readable objects with field
+names (a use case that is fairly rare at Magnetic).
+
+And the noble goal of terseness? It's for this reason that libraries like
 `characteristic <http://characteristic.readthedocs.org/en/stable/>`_ exist --
 as ways of decreasing the lines of boilerplate necessary to define a class with
 a number of "characteristic" fields or attributes, and upon which things like
