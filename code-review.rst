@@ -28,6 +28,14 @@ and the codebase in general throughout the guild, but when in conflict
 with its primary goal, we consider this goal to be... secondary.
 
 
+Constraints & Desires
+=====================
+
+Given our above motivation to uncover defects in code during the review, the
+constraints we place on our process should focus on maximizing our return on
+investment of reviewer time. 
+
+
 How Many Reviewers?
 ===================
 
@@ -79,8 +87,16 @@ Style & Static Checkers
 =======================
 
 
-Does Pair Programming Substitute?
-=================================
+Further Questions
+=================
+
+There are a number of further questions which we propose as worthy of
+consideration, without making recommendations about their answers:
+
+* How should pair programming affect the code review process?
+* Would encouraging a *checklist* to be created for each file or module improve
+  the detection of potential issues within it when the file was under
+  re-review?
 
 
 References
