@@ -24,6 +24,10 @@ Software should also follow the spirit of our `Engineering Manifesto
 which documents our values as a department.
 
 
+Version Control
+===============
+
+
 .. seealso::
 
     Dan Luu - How Completely Messed Up Practices Become Normal
