@@ -20,7 +20,7 @@ Software should be:
     * Flexible, generic, but not "abstract nonsense"
 
 Software should also follow the spirit of our `Engineering Manifesto
-<https://docs.google.com/presentation/d/1GUF84m4XV3aQtrE1PVHsSzeEgSQ3zaxJOS5xHj9RLn0/edit#slide=id.gc7987cad8_0_12>`_
+<https://docs.google.com/presentation/d/1GUF84m4XV3aQtrE1PVHsSzeEgSQ3zaxJOS5xHj9RLn0/>`_
 which documents our values as a department.
 
 

@@ -103,7 +103,7 @@ intersphinx_mapping = {
     "vcversioner": ("https://vcversioner.readthedocs.org/en/latest/", None),
 }
 extlinks = dict(
-    (k, (urljoin(url, "%s"), None))
+    (k, (urljoin(url, "%s.html"), None))
     for k, (url, _) in intersphinx_mapping.iteritems()
 )
 
@@ -300,6 +300,22 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+
+# -- Options for the linkcheck builder ------------------------------------
+
+
+# This would be nice to leave enabled, but e.g. for
+# https://github.com/Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29
+# it reports the anchor isn't found. I don't know if that's GitHub's
+# fault or the builder, but I don't care to find out.
+linkcheck_anchors = False
+
+
+# -- Options for sphinxcontrib-cheeseshop ---------------------------------
+
+cheeseshop_url = "https://pypi.python.org/pypi"
+
 
 # -- Options for sphinxcontrib-spelling -----------------------------------
 

@@ -16,7 +16,7 @@ Common (& Uncommon) Gotchas
                     invites mistakes because it is both easy to invoke and
                     unexpected or unreasonable in its outcome"
 
-                    -- https://en.wikipedia.org/wiki/Gotcha_(programming)
+                    -- `<https://en.wikipedia.org/wiki/Gotcha_(programming)>`_
 
             2) doesn't work exactly like :samp:`{XYZ other programming
             language} I know`
