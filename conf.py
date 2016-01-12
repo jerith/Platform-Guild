@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from urlparse import urljoin
 import os
 
 import vcversioner
@@ -14,6 +15,7 @@ THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 # ones.
 extensions = [
     "sphinx.ext.doctest",
+    "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
@@ -96,7 +98,12 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/2.7", None),
     "setuptools": ("https://pythonhosted.org/setuptools/", None),
     "sphinx": ("https://sphinx.readthedocs.org/en/latest/", None),
+    "wsgi": ("https://wsgi.readthedocs.org/en/latest/", None),
     "vcversioner": ("https://vcversioner.readthedocs.org/en/latest/", None),
+}
+extlinks = {
+    k : (urljoin(url, "%s"), None)
+    for k, (url, _) in intersphinx_mapping.iteritems()
 }
 
 
