@@ -97,14 +97,31 @@ Further Questions
 There are a number of further questions which we propose as worthy of
 consideration, without making recommendations about their answers:
 
-* How should pair programming affect the code review process?
+* How should pair programming affect the code review process? Is
+  software written while pair programming (either informally or in the
+  formal XP programming sense) less likely to produce defects that would
+  be caught by the code review process?
 * Would encouraging a *checklist* to be created for each file or module improve
   the detection of potential issues within it when the file was under
   re-review?
+
+
+.. seealso::
+
+    [CUCR]_
+        In which the authors created and trained a classifier to rate
+        the *usefulness* of comments (post-hoc) and inspected how
+        the usefulness of a comment affected its likelihood of being
+        addressed.
 
 
 References
 ==========
 
 .. [CRCS] `Code Review at Cisco Systems
-        <http://support.smartbear.com/support/media/resources/cc/book/code-review-cisco-case-study.pdf>`_
+    <http://support.smartbear.com/support/media/resources/cc/book/code-review-cisco-case-study.pdf>`_
+    (2006)
+
+.. [CUCR] `Characteristics of Useful Code Reviews:
+    An Empirical Study at Microsoft <http://research.microsoft.com/apps/pubs/default.aspx?id=249224>`_
+    (2015)

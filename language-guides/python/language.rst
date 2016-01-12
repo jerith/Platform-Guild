@@ -8,7 +8,7 @@ Common (& Uncommon) Gotchas
 .. glossary::
 
     gotcha
-        a valid construct in a system, programm or programming language that:
+        a valid construct in a system, program or programming language that:
 
             1)
                 .. epigraph::
@@ -40,7 +40,7 @@ Implementing Equality & Comparison Checks
 -----------------------------------------
 
 
-Useful (& Unuseful) Libraries
+Useful (& Useless) Libraries
 =============================
 
 collections.namedtuple

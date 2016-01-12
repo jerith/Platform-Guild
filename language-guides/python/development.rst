@@ -53,7 +53,7 @@ latest (C)Python to a user-writable location.
 .. seealso::
 
     :ref:`PyPy` below for installation of a separate interpreter used by many
-    production compnents. Its use has especially succeeded CPython for
+    production components. Its use has especially succeeded CPython for
     any new projects.
 
 .. note::
@@ -75,7 +75,7 @@ significant speed and memory benefits (amongst others), allowing Python
 to compete more fairly with the performance of "fully precompiled"
 languages.
 
-It is used extensibly in our production environment.
+It is used extensively in our production environment.
 
 
 .. note::
@@ -130,10 +130,10 @@ VirtualBox 5.0.4):
 
         $ eval "$(chef shell-init bash)"
 
-   This will change your environment so the ChefDK ruby is used instead of the
-   system-wide installation.  It should be possible to configure system-wide
-   ruby to work with vagrant plugins - if you know how to do that, please
-   update this README.
+   This will change your environment so the ChefDK ruby is used instead
+   of the system-wide installation. It should be possible to configure
+   system-wide ruby to work with vagrant plugins - if you know how to do
+   that, please update this README.
 
 #. Navigate to the *vm* directory
 #. Install vagrant plugins::
@@ -144,14 +144,16 @@ VirtualBox 5.0.4):
 
         $ vagrant up
 
-   This will download and save the base image, and run chef to automatically
-   configure the VM. If you are prompted to select a network adapter for
-   bridged networking, choose whichever adapter is connected (usually wifi).
+   This will download and save the base image, and run chef to
+   automatically configure the VM. If you are prompted to select a
+   network adapter for bridged networking, choose whichever adapter is
+   connected (usually WiFi).
 
-   Virtual machine is configured to use "private network" mode: VirtualBox will
-   create a new network adapter on your machine, usually called vboxnet0. The
-   VM is connected to the same network and all its ports are exposed.  To find
-   out the ip of the VM, run 'vagrant ssh' and execute 'ifconfig' on the VM.
+   Virtual machine is configured to use "private network" mode:
+   VirtualBox will create a new network adapter on your machine, usually
+   called ``vboxnet0``. The VM is connected to the same network and all
+   its ports are exposed. To find out the IP of the VM, run 'vagrant
+   ssh' and execute 'ifconfig' on the VM.
 
 
 Vagrant Cheat-Sheet

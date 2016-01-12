@@ -13,7 +13,7 @@ As overarching guidelines for CI builds, we recommend that:
   of the environment in which the software is being tested, which damages
   the confidence of the build.
 * Builds and their steps should be version controlled in the same way as
-  any other software, which promotes transparency and reproduceability.
+  any other software, which promotes transparency and reproducibility.
 
 Software Correctness and Testing Builds
 =======================================

@@ -72,8 +72,8 @@ slight modification and addition:
 .. _requirements.txt:
 
 
-requirements.txt
-================
+:file:`requirements.txt`
+========================
 
 :file:`requirements.txt` (and other similarly named files) are mechanisms for
 specifying *deployment environments* -- i.e., they delineate a *fixed* or
@@ -90,7 +90,7 @@ file along with the version used at time of deployment.
 
 Installing a requirements file is essentially equivalent to passing each of its
 containing options as command line options to `pip`, and can be performed by
-running:
+running::
 
     $ pip install -r requirements.txt
 

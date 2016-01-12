@@ -7,8 +7,8 @@ Commonly Useful Software
 Homebrew
 --------
 
-GNU Parallel
-------------
+GNU :program:`Parallel`
+-----------------------
 
 iTerm2
 ------
@@ -16,8 +16,8 @@ iTerm2
 :program:`awscli`
 -----------------
 
-diffutils
----------
+:program:`diffutils`
+--------------------
 
 :program:`git`
 --------------
@@ -27,5 +27,5 @@ diffutils
 
 .. _strace:
 
-strace
-------
+:command:`strace`
+------------------
