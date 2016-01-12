@@ -311,6 +311,9 @@ texinfo_documents = [
 # fault or the builder, but I don't care to find out.
 linkcheck_anchors = False
 
+linkcheck_timeout = 10  # seconds
+linkcheck_workers = 10  # threads
+
 
 # -- Options for sphinxcontrib-cheeseshop ---------------------------------
 
