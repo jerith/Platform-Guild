@@ -123,7 +123,7 @@ Mechanisms
 
 Versioning a Python package is functionality that is generally managed
 by `setuptools` during installations of `distributions <distribution
-package>`. A version is provided to :func:`setuptools.setup` which tells
+package>`. A version is provided to ``setuptools.setup`` which tells
 setuptools what version is being installed (which it uses to decide on
 ordering of versions, etc.).
 
@@ -136,7 +136,7 @@ runtime an important consideration.
 
 There are many ways to solve both use cases, the most basic of
 which is to duplicate the version information as a parameter to
-:func:`setuptools.setup`, and again within a module in the package such
+``setuptools.setup``, and again within a module in the package such
 that the version is available at runtime.
 
 A slightly DRYer approach is to import the version from within the

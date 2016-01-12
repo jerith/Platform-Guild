@@ -130,7 +130,7 @@ backwards compatibility but which returns more readable objects with field
 names (a use case that is fairly rare at Magnetic).
 
 And the noble goal of terseness? It's for this reason that libraries like
-`characteristic <http://characteristic.readthedocs.org/en/stable/>`_ exist --
+`characteristic`_ exist --
 as ways of decreasing the lines of boilerplate necessary to define a class with
 a number of "characteristic" fields or attributes, and upon which things like
 comparisons are defined fairly "trivially". Guild members are encouraged to use
@@ -139,4 +139,6 @@ these libraries when value classes are desired.
 .. seealso::
 
     :ref:`Why Not... <characteristic:why>`
-        Similar arguments proposed in the :mod:`characteristic` documentation
+        Similar arguments proposed in the `characteristic`_ documentation
+
+.. _characteristic: http://characteristic.readthedocs.org/en/stable/
