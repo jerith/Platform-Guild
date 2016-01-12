@@ -13,17 +13,17 @@ GNU Parallel
 iTerm2
 ------
 
-awscli
-------
+:program:`awscli`
+-----------------
 
 diffutils
 ---------
 
-git
----
+:program:`git`
+--------------
 
-par
----
+:program:`par`
+--------------
 
 .. _strace:
 

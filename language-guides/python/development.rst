@@ -47,8 +47,8 @@ manager, or worse with dependencies of the operating system itself.
 For these reasons, we recommend installing a non-system Python
 installation to do development with.
 
-On OS X, :command:`brew install python` via `Homebrew` will install the
-latest (C)Python to a user-writeable location.
+On OS X, ``brew install python`` via `Homebrew` will install the
+latest (C)Python to a user-writable location.
 
 .. seealso::
 
@@ -88,7 +88,7 @@ It is used extensibly in our production environment.
 The PyPy `download page <http://pypy.org/download.html>`_ contains
 installation instructions for a number of operating systems.
 
-On OS X, :command:`brew install pypy` via `Homebrew` will install
+On OS X, ``brew install pypy`` via `Homebrew` will install
 the latest release of PyPy. On Linux, using `Portable PyPy
 <https://github.com/squeaky-pl/portable-pypy>`_ is recommended, which is
 how PyPy is deployed to our production systems.
@@ -178,7 +178,7 @@ There are however other, more featureful options.
 matches `pdb` -- i.e. it can be inserted via e.g. ``pudb.set_trace`` and
 ``pudb.pm``, although it also provides useful helpers like ``pudb.runcall`` for
 invoking a callable after dropping into the debugger, and also provides a
-command line script (:command:`pudb`) which can enter another script after
+command line script (:program:`pudb`) which can enter another script after
 first starting the debugger.
 
 .. image:: /static/img/pudb-screenshot.png

@@ -86,7 +86,7 @@ file along with the version used at time of deployment.
 
 .. note::
 
-    Avoid using :command:`pip freeze` post hoc to generate requirements files.
+    Avoid using ``pip freeze`` post hoc to generate requirements files.
 
 Installing a requirements file is essentially equivalent to passing each of its
 containing options as command line options to `pip`, and can be performed by
@@ -109,8 +109,8 @@ requirements, rather than duplicating them.
 
     In all cases, requirements contain *Python* (and closely related)
     dependencies. A package may have non-Python dependencies that may
-    not be installable via :command:`pip install` and may require the
-    use of the host OS's package manger.
+    not be installable via ``pip install`` and may require the use of
+    the host OS's package manger.
 
 
 .. _versioning:
@@ -210,8 +210,7 @@ More on Scripts & Binaries
 
 Any executables, binaries or `script`\ s associated with a package
 should be placed in a :file:`bin/` directory in the :term:`repository root`.
-Each binary should have its executable bit set (via :command:`chmod
-+x`).
+Each binary should have its executable bit set (via ``chmod +x``).
 
 It is recommended that they *not* have file extensions.
 
