@@ -54,3 +54,12 @@ Please forgive inaccuracies or poor wording, as these documents are
 continuously evolving. Our initial goals prefer breadth of content
 over depth, so terseness, brevity, or incompleteness are especially
 prevalent.
+
+It also lacks copy-editing, so there are undoubtedly awkward sentences,
+missing commas, splellieng mistakes, and oxford commas. Forgive those
+too, but carry your red pen. Pull requests welcome.
+
+
+.. spelling::
+
+    splellieng
