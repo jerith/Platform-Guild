@@ -35,6 +35,14 @@ Given our above motivation to uncover defects in code during the review, the
 constraints we place on our process should focus on maximizing our return on
 investment of reviewer time.
 
+Without the pretentiousness of the last paragraph: we want to make sure
+our code is well written and maintainable, but while minimizing the
+effort we collectively need to invest.
+
+
+Time Goal & Sprint Velocity
+===========================
+
 
 How Many Reviewers?
 ===================
@@ -50,10 +58,6 @@ Commits vs. Diffs
 
 Line Length Limits
 ==================
-
-
-Time Goal & Sprint Velocity
-===========================
 
 
 Author Pre-review
