@@ -113,39 +113,45 @@ virtualenv
 Legacy Vagrant VMs
 ==================
 
-While we are migrating away from Chef, it is still possible to run some of our applications in a Chef-provisioned Vagrant VM. For example Thidwick repo contains Vagrant configuration that starts the application, the Kyoto database and the Kafka instance inside a single CentOS VM. 
+While we are migrating away from Chef, it is still possible to run some of our
+applications in a Chef-provisioned Vagrant VM. For example Thidwick repo
+contains Vagrant configuration that starts the application, the Kyoto database
+and the Kafka instance inside a single CentOS VM.
 
-To get started (tested with Thidwick, Vagrant 1.7.4, Chef DK 0.10.0 and VirtualBox 5.0.4):
+To get started (tested with Thidwick, Vagrant 1.7.4, Chef DK 0.10.0 and
+VirtualBox 5.0.4):
 
 1. Install `VirtualBox <https://www.virtualbox.org>`_
 
 #. Install `Vagrant <https://www.vagrantup.com/downloads.html>`_
 
-#. Install `ChefDK <https://downloads.chef.io/chef-dk>`_. For easy integration with Vagrant plugins, add this line to
-   your ~/.profile file::
+#. Install `ChefDK <https://downloads.chef.io/chef-dk>`_. For easy integration
+   with Vagrant plugins, add this line to your ~/.profile file::
 
-   	$ eval "$(chef shell-init bash)"
-   
-   This will change your environment so the ChefDK ruby is used instead of the system-wide installation. 
-   It should be possible to configure system-wide ruby to work with vagrant plugins - if you know how to do that, 
-   please update this README.
-   
+        $ eval "$(chef shell-init bash)"
+
+   This will change your environment so the ChefDK ruby is used instead of the
+   system-wide installation.  It should be possible to configure system-wide
+   ruby to work with vagrant plugins - if you know how to do that, please
+   update this README.
+
 #. Navigate to the *vm* directory
 #. Install vagrant plugins::
 
-   	   $ vagrant plugin install berkshelf chef
+        $ vagrant plugin install berkshelf chef
 
 #. Launch the VM::
 
-   	  $ vagrant up
+        $ vagrant up
 
    This will download and save the base image, and run chef to automatically
    configure the VM. If you are prompted to select a network adapter for
    bridged networking, choose whichever adapter is connected (usually wifi).
-   
-   Virtual machine is configured to use "private network" mode: VirtualBox will create a new network adapter
-   on your machine, usually called vboxnet0. The VM is connected to the same network and all its ports are exposed. 
-   To find out the ip of the VM, run 'vagrant ssh' and execute 'ifconfig' on the VM.
+
+   Virtual machine is configured to use "private network" mode: VirtualBox will
+   create a new network adapter on your machine, usually called vboxnet0. The
+   VM is connected to the same network and all its ports are exposed.  To find
+   out the ip of the VM, run 'vagrant ssh' and execute 'ifconfig' on the VM.
 
 
 Vagrant Cheat-Sheet

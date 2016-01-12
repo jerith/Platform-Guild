@@ -177,7 +177,7 @@ discussed above such that versions are specified in exactly one place*.
 * Create an initial version with or without any concrete contents:
 
     $ git tag -a v0.1.0 -m "Create a first version"
-  
+
 * Test the installation by attempting to install the package with `pip`:
 
     $ pip install --user .

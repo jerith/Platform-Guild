@@ -33,7 +33,7 @@ Constraints & Desires
 
 Given our above motivation to uncover defects in code during the review, the
 constraints we place on our process should focus on maximizing our return on
-investment of reviewer time. 
+investment of reviewer time.
 
 
 How Many Reviewers?
