@@ -40,8 +40,28 @@ our code is well written and maintainable, but while minimizing the
 effort we collectively need to invest.
 
 
-Time Goal & Sprint Velocity
-===========================
+Time & Sprint Velocity
+======================
+
+Developers, within the guild and at other organizations, spend a significant
+amount of time per week (or per sprint) doing reviews of other developers'
+code.
+
+Guild members should be mindful of this fact -- when estimating their
+capacities for sprints, each developer should account for time spent
+doing reviews. As a rough estimate, one might assume 5 hours a week are
+spent reading code reviews, but guild members are encouraged to *measure
+themselves*.
+
+.. seealso::
+
+    [IPCR]_ (hour result also quoted in [CUCR]_)
+        which surveyed developers about a number of qualitative factors
+        that affect their opinions of other team members when reviewing
+        others' code.
+
+        The same survey found that surveyed developers spent 6 hours a
+        week, on average, doing code reviews.
 
 
 How Many Reviewers?
@@ -129,3 +149,6 @@ References
 .. [CUCR] `Characteristics of Useful Code Reviews:
     An Empirical Study at Microsoft <http://research.microsoft.com/apps/pubs/default.aspx?id=249224>`_
     (2015)
+
+.. [IPCR] `Impact of Peer Code Review on Peer Impression Formation: A Study
+    <http://www.amiangshu.com/papers/Bosu-ESEM-2013.pdf>`_ (2013)
