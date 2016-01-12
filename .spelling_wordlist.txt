@@ -10,6 +10,7 @@ berkshelf
 changeset
 codebase
 conformant
+diff
 diffs
 executables
 # FIXME: this should be in the tokenizer? It's for faux pas

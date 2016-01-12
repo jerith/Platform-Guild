@@ -19,9 +19,6 @@ iTerm2
 :program:`diffutils`
 --------------------
 
-:program:`git`
---------------
-
 :program:`par`
 --------------
 

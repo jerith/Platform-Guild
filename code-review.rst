@@ -75,6 +75,21 @@ Who Should Be a Reviewer?
 Commits vs. Diffs
 ==================
 
+One of the central ideas of :doc:`version control <version-control>` is
+the existence of *commits* in their own right -- as encapsulated units
+of work.
+
+A `good commit <good-commit>` should be self-contained and informative. We
+aspire to adhere to this ideal -- and, ergo, our commits should convey some
+additional context or explanation that is not necessarily self-evident from the
+actual textual changes to the source code.
+
+Ideally, our code review tool would, therefore, include the commit information
+along with the diff of the changes. For various technical reasons, our current
+tool does not, but guild members are encouraged to include links to remote
+branches with their changes, so that the reviewer has access to the full
+context of the changes.
+
 
 Line Length Limits
 ==================
