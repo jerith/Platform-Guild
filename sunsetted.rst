@@ -39,7 +39,7 @@ Chef
 the configuration management system for platform components (and
 otherwise). **Ansible** should be used for all new services, and
 existing components' recipes should be ported to unified Ansible
-cookbooks in coordination with devops.
+cookbooks in coordination with TechOps.
 
 Explanation
 ############
@@ -60,7 +60,7 @@ make applications runnable **completely locally without expensive,
 hard-to-install dependencies**.
 
 **Docker** and **docker-compose** are other alternatives for developing
-reproduceable, pre-packaged app stacks.
+reproducible, prepackaged app stacks.
 
 Explanation
 ############
@@ -69,7 +69,7 @@ Explanation
   vagrant on new developer machines
 * Poor story for provisioning VMs -- Berkshelf was previously used to inject
   cookbooks into VMs for use by `Chef`_, but is similarly deprecated and
-  discouraged. The berkshelf plugin for vagrant was a consistent source of
+  discouraged. The Berkshelf plugin for vagrant was a consistent source of
   frustration due to the above compatibility concerns.
 * Encourages better, self-contained applications for faster development
 * VMs were not in-sync with `Chef`_ cookbooks used for deployment to real
@@ -100,6 +100,6 @@ Python packages that do not follow the suggested layout proposed in
 Explanation
 ###########
 
-* Besides the benefits elaborated on in the aformentioned article, uniformity
+* Besides the benefits elaborated on in the aforementioned article, uniformity
   of package and repository layout eases the burden for installation and
   provisioning.

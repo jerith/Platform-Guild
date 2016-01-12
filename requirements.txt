@@ -1,3 +1,4 @@
 sphinx
 sphinxcontrib-cheeseshop
+sphinxcontrib-spelling
 vcversioner
