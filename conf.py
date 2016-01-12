@@ -101,10 +101,10 @@ intersphinx_mapping = {
     "wsgi": ("https://wsgi.readthedocs.org/en/latest/", None),
     "vcversioner": ("https://vcversioner.readthedocs.org/en/latest/", None),
 }
-extlinks = {
-    k : (urljoin(url, "%s"), None)
+extlinks = dict(
+    (k, (urljoin(url, "%s"), None))
     for k, (url, _) in intersphinx_mapping.iteritems()
-}
+)
 
 
 # -- Options for HTML output ----------------------------------------------
