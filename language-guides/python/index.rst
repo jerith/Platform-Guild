@@ -16,5 +16,5 @@ Contents:
 
 .. seealso::
 
-    :doc:`/README`
+    :doc:`Home </README>`
         The guild-wide home page for this documentation for a general overview.
