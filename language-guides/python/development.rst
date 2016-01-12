@@ -109,6 +109,7 @@ how PyPy is deployed to our production systems.
 virtualenv
 ==========
 
+
 Legacy Vagrant VMs
 ==================
 
@@ -160,9 +161,64 @@ Vagrant Cheat-Sheet
 Debuggers
 =========
 
+The `pdb` module in the standard library is a debugger included alongside
+Python which can be used both to debug running programs via `pdb.set_trace`,
+and to inspect the state of the world after exceptions, via `pdb.pm`.
+
+There are however other, more featureful options.
+
+:pypi:`pudb` is a recommended console debugger which can display source code
+*while* debugging, along with a number of other useful features. Its interface
+matches `pdb` -- i.e. it can be inserted via e.g. ``pudb.set_trace`` and
+``pudb.pm``, although it also provides useful helpers like ``pudb.runcall`` for
+invoking a callable after dropping into the debugger, and also provides a
+command line script (:command:`pudb`) which can enter another script after
+first starting the debugger.
+
+.. image:: /static/img/pudb-screenshot.png
+    :alt: The pudb debugger
+
+It can be installed in the `usual way <pip>`, via :code:`pip install pudb`.
+
+Many `editor`\ s and `test runner`\ s also integrate with a debugger.
+
+.. note::
+
+    In many, if not all cases, the use of a debugger is a crutch that indicates
+    a gap in unit test coverage or general understanding of the code base.
+
+    Guild members are encouraged to follow up uses of a debugger by improving
+    the coverage or maintainability of the section of the code that they needed
+    to inspect.
+
 
 Profilers
 =========
+
+
+.. _editor:
+
+Editors
+=======
+
+Ah, the world's oldest question -- what editor should one use?
+
+The typical answer to this question should be "whichever you are already
+comfortable with".
+
+Given no previous preference, Vim, Emacs, PyCharm, and Sublime Edit are all
+fairly popular choices amongst Python developers.
+
+The only strict "requirement" would be to configure your editor to always
+insert 4 spaces when the tab key is pressed (rather than a hard tab character
+-- note though that a hard tab should always be displayed as 8 spaces). Almost
+any editor not named Notepad can be configured to do so (including nano!).
+
+
+.. seealso::
+
+    :doc:`style`
+        Our style guide for more elaborate information.
 
 
 Avoiding Common Gotchas
