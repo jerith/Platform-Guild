@@ -142,7 +142,13 @@ Being able to distill code reviews in to small enough chunks is a skill
 difficult to take an *already completed* changeset and break it up into
 separate chunks in a non-trivial, reviewable manner. As a guild, we
 acknowledge this fact but are committed to cultivate this skill due to
-the benefits it offers..
+the benefits it offers.
+
+[CUCR]_ also identifies a correlation between the total number of files
+in the changeset and the number of defects uncovered -- more files in
+the review has a negative impact on the number of defects uncovered --
+but it is unclear whether this correlation was done after first removing
+the correlation with line length. See Section VI, Figure 8.
 
 
 The Difficulties of Configuration Changes
