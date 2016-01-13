@@ -74,13 +74,13 @@ comments in their code reviews:
 
 .. epigraph::
 
-    [D]evelopers who had made prior changes to files in a change under
+    [Developers] who had made prior changes to files in a change under
     review had a higher proportion of useful comments in four out of the
     five projects ..., but we did not see a difference in effectiveness
     based on the number of times that a developer had worked on a file.
 
     That is, comments from developers who had changed a file ten times
-    had the same usefullness density as from developers who had only
+    had the same usefulness density as from developers who had only
     changed a file once.
 
     -- [CUCR]_ Section VI: A.1
@@ -89,7 +89,7 @@ Part of this realization (that developers learn a lot from having
 touched a particular source file or area) also aligns strongly with our
 own anecdotal experiences.
 
-Inline with our goal to maximize the number of defects we find, we
+In line with our goal to maximize the number of defects we find, we
 therefore recommend that changesets be reviewed by developers who have
 previously *worked* on a particular file.
 
@@ -137,9 +137,28 @@ How Many Reviewers Should There Be?
 What *Can* Be Reviewed?
 =======================
 
+Being able to distill code reviews in to small enough chunks is a skill
+-- one that does not necessarily come naturally! It is especially
+difficult to take an *already completed* changeset and break it up into
+separate chunks in a non-trivial, reviewable manner. As a guild, we
+acknowledge this fact but are committed to cultivate this skill due to
+the benefits it offers..
+
 
 The Difficulties of Configuration Changes
 -----------------------------------------
+
+Configuration changes are examples of particularly "risky" or unique
+changesets. A configuration change often is short but impactful.
+
+In these cases we stress our above recommendation to have changes
+reviewed by seasoned guild members, and to acknowledge the care needed
+to ensure that configuration changes are done properly.
+
+Developers reviewing configuration changesets should look carefully at
+the failsafe mechanisms in the surrounding code to ensure that systems
+are hardened to at least help identify potential configuration issues if
+possible, should a human miss a potential issue.
 
 
 Commits vs. Diffs
