@@ -205,6 +205,9 @@ consideration, without making recommendations about their answers:
 * Would encouraging a *checklist* to be created for each file or module improve
   the detection of potential issues within it when the file was under
   re-review?
+* Would encouraging or enforcing a *workflow* for individual comments be
+  beneficial -- e.g., asking authors to transition each comment thread to
+  "Addressed", "Won't Fix", "ACKed", etc.?
 
 
 .. seealso::
