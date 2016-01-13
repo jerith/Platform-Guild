@@ -221,6 +221,22 @@ Re-Review
 =========
 
 
+Summary
+=======
+
+To summarize our current accepted best practice:
+
+Reviews should be done by one developer, and preferably by one who has
+previously edited the files under review. This developer's sign-off
+gates the change.
+
+The total changeset size should not exceed 200 lines changed, and reviewers
+should spend (up to) a dedicated hour reading them carefully in context.
+
+Authors are encouraged to pre-review their own changesets and to leave comments
+which will help the reviewer through the changes and their reasoning.
+
+
 Further Questions
 =================
 
