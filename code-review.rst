@@ -255,7 +255,7 @@ consideration, without making recommendations about their answers:
 * Would encouraging or enforcing a *workflow* for individual comments be
   beneficial -- e.g., asking authors to transition each comment thread to
   "Addressed", "Won't Fix", "ACKed", etc.?
-* How would artificially asking developers to *re-review already-merged*
+* How would asking developers to artificially *re-review already-merged*
   changesets affect reliability? Such a practice could be used to familiarize
   new developers with the code review process and its contextual code, but also
   might provide a mechanism for doing retrospective evaluation of a changeset
