@@ -3,6 +3,8 @@ Code Review
 ===========
 
 
+.. _cr-goals:
+
 Goals
 =====
 
@@ -70,6 +72,66 @@ How Many Reviewers?
 
 Who Should Be a Reviewer?
 =========================
+
+[CUCR]_ investigated a number of factors that contributed to the usefulness of
+comments in their code reviews:
+
+.. epigraph::
+
+    [D]evelopers who had made prior changes to files in a change under
+    review had a higher proportion of useful comments in four out of the
+    five projects ..., but we did not see a difference in effectiveness
+    based on the number of times that a developer had worked on a file.
+
+    That is, comments from developers who had changed a file ten times
+    had the same usefullness density as from developers who had only
+    changed a file once.
+
+    -- [CUCR]_ Section VI: A.1
+
+Part of this realization (that developers learn a lot from having
+touched a particular source file or area) also aligns strongly with our
+own anecdotal experiences.
+
+Inline with our goal to maximize the number of defects we find, we
+therefore recommend that changesets be reviewed by developers who have
+previously *worked* on a particular file.
+
+Interestingly, [CUCR]_ also investigated the usefulness of comments by
+developers who had previously *reviewed* the same file, and found that
+it had an even more drastic effect on the likelihood that a particular
+comment was useful. We encourage repeat reviewers, but [CUCR]_ caveats
+this finding by noting that many organizations require a new developer
+to first review new code before being granted the right to change it.
+
+*We therefore encourage that reviews be done by developers who have
+previously touched the source file.*
+
+There are 2 additional points worth noting. Our conclusion above is in
+direct conflict with the secondary goal of code review discussed `above
+<cr-goals>`: knowledge dissemination.
+
+If code reviews are always done by previous reviewers and committers, it
+limits the exposure that new developers will have to changesets.
+
+The guild currently *accepts* this realization and chooses to counterbalance
+the reduction in knowledge distribution by:
+
+* CC'ing new developers so they can still participate, but do not "block" the
+  review
+
+* Using functions other than Code Review (such as pair programming) to
+  compensate
+
+* Continuing to encourage new developers to still *work* on new code bases
+  despite not having reviewed previous code within it.
+
+.. seealso::
+
+    [CUCR]_
+        The entirety of this paper, but particularly Section VI have a number
+        of interesting nuances and findings which guild members are encouraged
+        to read and think about as we attempt to improve our processes.
 
 
 Commits vs. Diffs
