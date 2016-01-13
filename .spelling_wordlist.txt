@@ -1,14 +1,17 @@
+CC'ing
 CI
 CPython
 Homebrew
-iTerm
 RPython
 Thidwick
 ansible
 app
 berkshelf
 changeset
+changesets
 codebase
+committer
+committers
 conformant
 diff
 diffs
@@ -16,7 +19,9 @@ executables
 # FIXME: this should be in the tokenizer? It's for faux pas
 faux
 featureful
+iTerm
 ifconfig
+impactful
 inbox
 installable
 namedtuple
@@ -28,6 +33,7 @@ positionality
 pre
 precompiled
 repo
+reviewable
 runnable
 runtime
 subclasses
