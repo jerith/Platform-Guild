@@ -66,12 +66,8 @@ themselves*.
         week, on average, doing code reviews.
 
 
-How Many Reviewers?
-===================
-
-
-Who Should Be a Reviewer?
-=========================
+Who *Should* Be a Reviewer?
+===========================
 
 [CUCR]_ investigated a number of factors that contributed to the usefulness of
 comments in their code reviews:
@@ -134,6 +130,18 @@ the reduction in knowledge distribution by:
         to read and think about as we attempt to improve our processes.
 
 
+How Many Reviewers Should There Be?
+===================================
+
+
+What *Can* Be Reviewed?
+=======================
+
+
+The Difficulties of Configuration Changes
+-----------------------------------------
+
+
 Commits vs. Diffs
 ==================
 
@@ -151,10 +159,6 @@ along with the diff of the changes. For various technical reasons, our current
 tool does not, but guild members are encouraged to include links to remote
 branches with their changes, so that the reviewer has access to the full
 context of the changes.
-
-
-Line Length Limits
-==================
 
 
 Author Pre-review
