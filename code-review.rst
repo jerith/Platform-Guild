@@ -158,6 +158,19 @@ the review has a negative impact on the number of defects uncovered --
 but it is unclear whether this correlation was done after first removing
 the correlation with line length. See Section VI, Figure 8.
 
+.. seealso::
+
+    [INTF]_
+        Particularly Section IV.A, which discusses similar results about
+        patch size and its effect on *acceptance* time.
+
+        Section IV.C also notes results about the effect a particular
+        *component* has on *response* time -- i.e., some code bases are
+        harder to review than others.
+
+        A number of other factors were also found to be statistically
+        significant in the dataset collected in the paper.
+
 
 The Difficulties of Configuration Changes
 -----------------------------------------
@@ -301,3 +314,6 @@ References
 
 .. [IPCR] `Impact of Peer Code Review on Peer Impression Formation: A Study
     <http://www.amiangshu.com/papers/Bosu-ESEM-2013.pdf>`_ (2013)
+
+.. [INTF] `The Influence of Non-technical Factors on Code Review
+    <http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6671287>`_ (2013)
