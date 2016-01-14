@@ -11,9 +11,7 @@ This repository collects some of our recommendations for each other
 within our areas of interest & expertise.
 
 
-`Our manifesto`_ describes some of our high level principles and directives.
-
-.. _Our manifesto: https://docs.google.com/document/d/1o5Yu2PuGWl_Bo46LYAk6aUDpS2JHJvVK1P05uGIM9yM/
+:doc:`manifesto` describes some of our high level principles and directives.
 
 
 Contents
