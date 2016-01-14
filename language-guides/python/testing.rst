@@ -65,8 +65,17 @@ project.
         includes (is built around) an alternate test framework but which
         can run `unittest` test suites as well.
 
-Tox
----
+
+.. _tox:
+
+:program:`Tox`
+--------------
+
+
+.. _detox:
+
+:program:`detox`
+----------------
 
 
 Test Writing

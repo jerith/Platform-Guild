@@ -59,6 +59,10 @@ It also lacks copy-editing, so there are undoubtedly awkward sentences,
 missing commas, splellieng mistakes, and oxford commas. Forgive those
 too, but carry your red pen. Pull requests welcome.
 
+When making changes to the documentation, you can run the test suite (which
+checks for style, spelling and syntax, amongst other things) via `tox` (or
+`detox`).
+
 
 .. spelling::
 
