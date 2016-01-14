@@ -41,6 +41,14 @@ Without the pretentiousness of the last paragraph: we want to make sure
 our code is well written and maintainable, but while minimizing the
 effort we collectively need to invest.
 
+An often overlooked or underrepresented desire is to have *authors* perceive
+that reviews are conducted in a timely manner -- authors should not feel like
+they are *hampered* by the review process, or that there are gaps of silence
+while waiting for someone to address their proposed changes. Quality is
+important, and moving too fast is harmful in its own ways, but we wish to
+account for and encourage a process that allows reviews to be timely so that
+developers can get quick feedback on their changes.
+
 
 Time & Sprint Velocity
 ======================
