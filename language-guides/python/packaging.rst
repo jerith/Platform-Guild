@@ -4,7 +4,7 @@ Packaging Python Projects
 
 .. seealso::
 
-    `The PyPA documentation on `distributions <distribution package>`
+    `The PyPA documentation on distributions
     <https://packaging.python.org/en/latest/distributing/#configuring-your-project>`_
 
 .. glossary::
@@ -25,7 +25,7 @@ Packaging Python Projects
 
             .. seealso::
 
-                `scripts-and-binaries`_
+                `scripts-and-binaries`
 
     package
         A directory containing a :file:`__init__.py` along with
@@ -186,6 +186,13 @@ An example can be found in many existing GitHub repositories within the
 Magnetic organization, including e.g. `Pier <https://github.com/Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29>`_
 
 See the `vcversioner` documentation for more details.
+
+.. seealso::
+
+    `packaging:single sourcing the version`
+
+        Upstream documentation on solving the same problem mentioned above with
+        duplication of version information, with similar solutions.
 
 
 Numbering Schemes
