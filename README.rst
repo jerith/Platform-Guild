@@ -19,7 +19,7 @@ Contents
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 1
 
    *
    language-guides/python/index.rst
