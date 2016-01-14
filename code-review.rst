@@ -66,7 +66,7 @@ themselves*.
         week, on average, doing code reviews.
 
 
-Who *Should* Be a Reviewer?
+*Who* Should Be a Reviewer?
 ===========================
 
 [CUCR]_ investigated a number of factors that contributed to the usefulness of
@@ -130,11 +130,11 @@ the reduction in knowledge distribution by:
         to read and think about as we attempt to improve our processes.
 
 
-How Many Reviewers Should There Be?
-===================================
+*How Many* Reviewers Should There Be?
+=====================================
 
 
-What *Can* Be Reviewed?
+*What* Can Be Reviewed?
 =======================
 
 Being able to distill code reviews in to small enough chunks is a skill
@@ -165,6 +165,14 @@ Developers reviewing configuration changesets should look carefully at
 the failsafe mechanisms in the surrounding code to ensure that systems
 are hardened to at least help identify potential configuration issues if
 possible, should a human miss a potential issue.
+
+
+*When* Should Code Be Reviewed
+==============================
+
+
+*How* Should Reviewers Read Changesets
+======================================
 
 
 Commits vs. Diffs
