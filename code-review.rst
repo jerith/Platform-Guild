@@ -192,6 +192,10 @@ possible, should a human miss a potential issue.
 ==============================
 
 
+Style & Static Checkers
+-----------------------
+
+
 *How* Should Reviewers Read Changesets
 ======================================
 
@@ -240,10 +244,6 @@ the guild) find the former to be more tenable.
 
 The guild therefore *strongly encourages* but does not mandate
 pre-review by the author of a code review.
-
-
-Style & Static Checkers
-=======================
 
 
 Summary
