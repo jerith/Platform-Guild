@@ -61,9 +61,10 @@ For packaging Python projects (new and old), follow the guidelines outlined in
 <http://blog.habnab.it/blog/2013/07/21/python-packages-and-you/>`_ with only
 slight modification and addition:
 
-* Always use `setuptools` when writing a `setup.py` (mentioned in the
-  article as a suitable alternative, but setuptools is now more mature and
-  better maintained than it was).
+* Always use `setuptools` when writing a `setup.py` (mentioned in the article
+  as a suitable alternative, but setuptools is now more mature and better
+  maintained than it was. New versions of `pip` will always use `setuptools`
+  now, even if a `setup.py` happens to only import `distutils`).
 * Avoid ``if __name__ == "__main__"`` blocks in modules in favor of an explicit
   script or a setuptools `entry point
   <https://pythonhosted.org/setuptools/setuptools.html#automatic-script-creation>`_.
