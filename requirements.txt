@@ -1,3 +1,5 @@
+# FIXME: Needed until sphinxcontrib-spelling properly declares deps
+pyenchant
 sphinx
 sphinxcontrib-cheeseshop
 sphinxcontrib-spelling
