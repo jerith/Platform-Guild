@@ -18,3 +18,9 @@ What Makes a Good Commit?
 .. sidebar:: :program:`git`
 
     :program:`git` is a powerful and terrible tool.
+
+    .. rubric:: Recommended Settings
+
+    .. todo:: merge.log
+    .. todo:: push.default
+    .. todo:: push.followTags
