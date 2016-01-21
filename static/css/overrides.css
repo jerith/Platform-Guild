@@ -19,3 +19,7 @@ p.grace-note {
     padding: 1.4em 0 1.4em 0;
     text-align: center;
 }
+
+#github-comments {
+    background: #CCC;
+}
