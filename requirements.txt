@@ -1,6 +1,8 @@
 # FIXME: Needed until sphinxcontrib-spelling properly declares deps
 pyenchant
+betterpath
 sphinx
 sphinxcontrib-cheeseshop
+sphinxcontrib-githubcomments
 sphinxcontrib-spelling
 vcversioner

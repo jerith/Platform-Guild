@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from bp.filepath import FilePath
 from urlparse import urljoin
 import os
 
@@ -21,6 +22,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinxcontrib.cheeseshop",
     "sphinxcontrib.spelling",
+    "sphinxcontrib.githubcomments",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -107,6 +109,9 @@ extlinks = dict(
     for k, (url, _) in intersphinx_mapping.iteritems()
 )
 
+rst_epilog = """
+.. github-comments::
+"""
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -323,3 +328,10 @@ cheeseshop_url = "https://pypi.python.org/pypi"
 # -- Options for sphinxcontrib-spelling -----------------------------------
 
 spelling_word_list_filename = ".spelling_wordlist.txt"
+
+
+# -- Options for sphinxcontrib-githubcomments -----------------------------
+
+github_repository = FilePath(__file__).parent()
+github_repository_owner = "Magnetic"
+github_repository_name = "Platform-Guild"
