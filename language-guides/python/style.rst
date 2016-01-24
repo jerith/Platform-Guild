@@ -2,6 +2,13 @@
 Style Guidelines
 ================
 
+
+.. seealso::
+
+    `discouraged-builtins`
+    `discouraged-stdlib`
+
+
 API Documentation
 -----------------
 

@@ -102,8 +102,12 @@ cautioned unless their limitations are understood:
 
 .. _discouraged-stdlib:
 
+Discouraged Standard Library Functionality
+------------------------------------------
+
+
 collections.namedtuple
-----------------------
+######################
 
 Guild members are strongly encouraged to *avoid* using
 `collections.namedtuple`.
