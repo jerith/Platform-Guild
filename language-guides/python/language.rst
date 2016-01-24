@@ -49,7 +49,7 @@ Discouraged Built-ins
 ---------------------
 
 There are a number of built-in objects (i.e. objects in the :mod:`__builtin__`
-namespace, available without any imports, whose use is *strongly discouraged*.
+namespace, available without any imports) whose use is *strongly discouraged*.
 
 The following is a brief list:
 
