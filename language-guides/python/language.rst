@@ -82,7 +82,6 @@ cautioned unless their limitations are understood:
 * :func:`bin`, :func:`hex` & :func:`oct`
 * :func:`delattr`
 * :func:`dir`
-* :func:`hasattr`
 * :func:`map`
 * :func:`print` & :func:`raw_input`
 * :func:`reduce`
