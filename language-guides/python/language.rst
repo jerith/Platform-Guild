@@ -40,6 +40,10 @@ Implementing Equality & Comparison Checks
 -----------------------------------------
 
 
+Exception Hierarchies
+---------------------
+
+
 Useful (& Useless) Libraries
 =============================
 
