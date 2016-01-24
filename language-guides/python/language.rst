@@ -71,7 +71,6 @@ The following is a brief list:
 * :func:`reload`
 * :func:`round`
 * @\ :func:`staticmethod`
-* :func:`super`
 * :class:`type`
 * :func:`vars`
 * :func:`__import__`
@@ -85,6 +84,7 @@ cautioned unless their limitations are understood:
 * :func:`map`
 * :func:`print` & :func:`raw_input`
 * :func:`reduce`
+* :func:`super`
 * :func:`unicode`
 
 
