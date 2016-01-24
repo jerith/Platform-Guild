@@ -128,12 +128,10 @@ package>`. A version is provided to ``setuptools.setup`` which tells
 setuptools what version is being installed (which it uses to decide on
 ordering of versions, etc.).
 
-As a separate but important concern, occasionally developers
-wish to know "which version of a particular module or package
-is currently installed or imported" from within a `REPL
-<https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_.
-This use case makes having the version information easily accessible at
-runtime an important consideration.
+As a separate but important concern, occasionally developers wish to know
+"which version of a particular module or package is currently installed or
+imported" from within a `REPL`.  This use case makes having the version
+information easily accessible at runtime an important consideration.
 
 There are many ways to solve both use cases, the most basic of
 which is to duplicate the version information as a parameter to

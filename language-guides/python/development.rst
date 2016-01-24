@@ -200,6 +200,40 @@ Many `editor`\ s and `test runner`\ s also integrate with a debugger.
     to inspect.
 
 
+REPLs
+======
+
+The "vanilla" Python :term:`REPL` (i.e. the program which executes when running
+:program:`python` or :program:`pypy`, which differs slightly in offering even
+more features) is more than sufficient for many developers. It offers both
+:mod:`readline and tab completion <rlcompleter>` support.
+
+.. sidebar:: ...
+
+    ... unless you're on Python 3, then `dabeaz has some bad news for you
+    <https://twitter.com/dabeaz/status/618378554812796928>`_ (ed.: has now
+    mostly been fixed).
+
+Developers are encouraged to familiarize themselves with its functionality and
+command line options. In particular, ``python -c`` and ``python -i`` are useful
+for development, and ``python -m`` is an oft-used mechanism for running
+executable modules. See :manpage:`python(1)` for more details.
+
+Developers looking for more than the above are encouraged to try `bpython
+<http://bpython-interpreter.org/screenshots.html>`_, which offers real-time
+suggestions, syntax highlighting and other useful features. It is installable
+in the usual way, via ``pip install --user bpython``.
+
+:program:`ipython` / :program:`jupyter` is *not* generally recommended for
+developers because its behavior differs *significantly* from Python in ways
+that often (at least historically) have left beginners in situations where
+their code works perfectly fine in a "vanilla" interpreter but does not when
+executed in :program:`ipython`. Developers who still choose to use it for its
+conveniences are of course more than welcome, but any issues while using it
+should first be double checked by running a reproducible example in some other
+interpreter.
+
+
 Profilers
 =========
 
@@ -231,6 +265,32 @@ any editor not named Notepad can be configured to do so (including nano!).
 
 Avoiding Common Gotchas
 =======================
+
+There are a number of small tweaks that developers are encouraged to make, in
+the hopes that they will help avoid a number of common gotchas.
+
+The most important of which is to **set** :envvar:`PYTHONDONTWRITEBYTECODE` (to
+``true`` or any other non-empty value, via e.g.::
+
+    PYTHONDONTWRITEBYTECODE=true; export PYTHONDONTWRITEBYTECODE
+
+in your shell's configuration.) Pre-compilation of bytecode (which happens on
+module import) is generally *more harmful than it is helpful* -- the time
+savings for importing modules during development are extremely minimal, whereas
+developers are often tripped up by a stale (unremoved, left over) :file:`.pyc`
+file that still affects their test runs or runtime.
+
+Disabling the pre-compilation generally therefore has no noticeable effects,
+and is highly recommended. Compilation still will happen as part of
+installation processes.
+
+.. note::
+
+    :ref:`PyPy`\ 's behavior regarding :file:`.pyc` files is generally more
+    helpful even without the above recommendation, as, unlike `CPython`, it
+    will `ignore lone pyc files by default
+    <http://doc.pypy.org/en/latest/config/objspace.lonepycfiles.html>`_. It
+    does so for similar reasoning.
 
 .. seealso::
 
@@ -276,3 +336,10 @@ Glossary
         collector implementations, a JIT compiler generator, and other
         useful tools for implementation of programming languages. See
         the :term:`PyPy` documentation for more details.
+
+    REPL
+        Read/Edit/Print Loop -- loosely, the interactive interpreter where code
+        can be entered and evaluated.
+
+        .. seealso::
+            `<https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_

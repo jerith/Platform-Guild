@@ -43,6 +43,54 @@ Implementing Equality & Comparison Checks
 Useful (& Useless) Libraries
 =============================
 
+.. _discouraged-builtins:
+
+Discouraged Built-ins
+---------------------
+
+There are a number of built-in objects (i.e. objects in the :mod:`__builtin__`
+namespace, available without any imports, whose use is *strongly discouraged*.
+
+The following is a brief list:
+
+* :func:`callable`
+* :func:`cmp`
+* :func:`compile`
+* :func:`eval`
+* :func:`execfile`
+* :func:`file`
+* :func:`filter`
+* :func:`globals` & :func:`locals`
+* :func:`hasattr`
+* :func:`id`
+* :func:`input`
+* :func:`isinstance`
+* :func:`issubclass`
+* :class:`long`
+* :func:`reload`
+* :func:`round`
+* @\ :func:`staticmethod`
+* :func:`super`
+* :class:`type`
+* :func:`vars`
+* :func:`__import__`
+
+The following built-ins are also of questionable use, and their use is
+cautioned unless their limitations are understood:
+
+* :func:`basestring`
+* :func:`bin`, :func:`hex` & :func:`oct`
+* :func:`delattr`
+* :func:`dir`
+* :func:`hasattr`
+* :func:`map`
+* :func:`print` & :func:`raw_input`
+* :func:`reduce`
+* :func:`unicode`
+
+
+.. _discouraged-stdlib:
+
 collections.namedtuple
 ----------------------
 
@@ -142,3 +190,50 @@ these libraries when value classes are desired.
         Similar arguments proposed in the `characteristic`_ documentation
 
 .. _characteristic: http://characteristic.readthedocs.org/en/stable/
+
+
+Frequently Asked Questions
+==========================
+
+
+How Do I...
+-----------
+
+... reload a Python module at runtime?
+    Generally speaking, you don't, can't and shouldn't. You need to restart
+    your process. If you wish to do so "regularly" in some specific domain,
+    like while writing an IRC bot, the correct solution is often to handle
+    respawning a subprocess via a bouncer, which will restart with the new
+    version of the particular module or object.
+
+    The reasons for this are fairly simple: in order to "properly" accomplish
+    what developers generally expect out of reloading, the entire Python object
+    graph would need to be visited. Consider a module ``foo`` which was to be
+    reloaded -- any object in the entire object graph that held a reference to
+    any "previous" version of objects from ``foo`` would need to have its
+    reference reconciled in some way.
+
+    Don't be misled by the confusing presence of :func:`reload` in the builtin
+    namespace! Its usage is `strongly discouraged <discouraged-builtins>`
+    because its behavior in the above situation is essentially to do the
+    simplistic thing, and not update any references.
+
+... (copy|serialize) arbitrary Python objects?
+    Generally speaking, you don't, can't and shouldn't. You need to know what
+    kinds of objects you wish to copy or serialize, and to have them know (in
+    the OO sense) how they need to be copied.
+
+    Serializing or copying arbitrary Python objects is not a generally solvable
+    problem. Consider, for the most trivial example, an object with an
+    attribute ``foo`` that points at an open :func:`file` object.
+
+    This attribute (and therefore this object) is not in any reasonable sense
+    serializable or (deep-)copyable.
+
+    Don't be misled by the confusing presence of :mod:`pickle`, :mod:`shelve`
+    and :mod:`copy` in the standard library! Their usage is `strongly
+    discouraged <discouraged-stdlib>` for the reasons mentioned above.
+
+    Developers are *very strongly discouraged* from serializing arbitrary
+    objects, in favor of serializing *data* that can be used to construct the
+    objects that are needed.
