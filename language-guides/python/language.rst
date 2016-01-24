@@ -172,7 +172,7 @@ The explanation for the above is that :func:`~collections.namedtuple`\ s are
 first and foremost, *tuples*. They will degrade into tuples for comparisons,
 and field names are strictly for readability -- they assign names to ultimately
 *positional* components. Introducing the concept of positionality to a fresh,
-new class is not often intentional -- an arbitrary class' fields should not be
+new class is not often intentional -- an arbitrary class's fields should not be
 orderable in some arbitrary order.
 
 This gotcha is also an illustrative example of the dangers of
