@@ -57,21 +57,29 @@ namespace, available without any imports) whose use is *strongly discouraged*.
 
 The following is a brief list:
 
-* :func:`basestring`
-* :func:`callable`
+:func:`isinstance`
+##################
+
+
+:func:`basestring` / :func:`file` / :class:`long`
+#################################################
+
+
+:func:`compile` / :func:`eval` / :func:`execfile`
+#################################################
+
+
+:func:`globals` & :func:`locals`
+################################
+
+
 * :func:`cmp`
-* :func:`compile`
-* :func:`eval`
-* :func:`execfile`
-* :func:`file`
+* :func:`callable`
 * :func:`filter`
-* :func:`globals` & :func:`locals`
 * :func:`hasattr`
 * :func:`id`
 * :func:`input`
-* :func:`isinstance`
 * :func:`issubclass`
-* :class:`long`
 * :func:`reload`
 * :func:`round`
 * @\ :func:`staticmethod`
