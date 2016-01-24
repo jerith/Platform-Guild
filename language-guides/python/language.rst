@@ -53,6 +53,7 @@ namespace, available without any imports) whose use is *strongly discouraged*.
 
 The following is a brief list:
 
+* :func:`basestring`
 * :func:`callable`
 * :func:`cmp`
 * :func:`compile`
@@ -78,7 +79,6 @@ The following is a brief list:
 The following built-ins are also of questionable use, and their use is
 cautioned unless their limitations are understood:
 
-* :func:`basestring`
 * :func:`bin`, :func:`hex` & :func:`oct`
 * :func:`delattr`
 * :func:`dir`
