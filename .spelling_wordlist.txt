@@ -8,6 +8,7 @@ amongst
 ansible
 app
 berkshelf
+builtin
 bytecode
 changeset
 changesets

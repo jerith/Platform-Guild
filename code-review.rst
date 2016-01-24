@@ -212,6 +212,11 @@ aspire to adhere to this ideal -- and, ergo, our commits should convey some
 additional context or explanation that is not necessarily self-evident from the
 actual textual changes to the source code.
 
+Besides providing this context as *help* for the reviewer, a commit message is
+*entirely reviewable* and deserves attention -- the presence (or absence) of
+good commits, regardless of the overall changeset, should be reviewed to help
+authors make better commits.
+
 Ideally, our code review tool would, therefore, include the commit information
 along with the diff of the changes. For various technical reasons, our current
 tool does not, but guild members are encouraged to include links to remote
