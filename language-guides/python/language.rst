@@ -63,6 +63,12 @@ The following is a brief list:
 ##################
 
 
+.. seealso::
+
+    `A Brief Note on Traits vs. Interfaces
+    <http://eev.ee/blog/2012/11/17/a-little-bit-rusty/#classes>`_
+
+
 :func:`basestring` / :func:`file` / :class:`long`
 #################################################
 
