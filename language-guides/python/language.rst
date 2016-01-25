@@ -59,8 +59,8 @@ The following is a brief list:
 
 .. _isinstance-vs-duck-typing:
 
-:func:`isinstance`
-##################
+:func:`isinstance` / :func:`issubclass`
+#######################################
 
 
 .. seealso::
@@ -73,8 +73,8 @@ The following is a brief list:
 #################################################
 
 
-:func:`compile` / :func:`eval` / :func:`execfile`
-#################################################
+:func:`compile` / :func:`eval` / :func:`execfile` / :func:`input`
+#################################################################
 
 
 :func:`globals` / :func:`locals`
@@ -127,19 +127,20 @@ ways to represent state transitions, but even in cases such as the
 above, we strongly prefer initializing the relevant attribute to a
 sentinel (often ``None``) which can be checked for.
 
-The second case where :func:`hasattr` is occasionally seen is for doing
-"type" dispatch. A function that might accept objects of different types
-(under our Python definition of type) chooses an implementation by
-inspecting the presence or lack of particular identifying attributes or
-methods. Developers occasionally find virtue in this usage, especially
-over the alternative -- use of :ref:`isinstance-vs-duck-typing`, and
-rightfully so, but we prefer *avoiding functions that accept multiple
-types* to begin with, in favor of separate callables with defined,
-homogeneous APIs. Like many topics, this one deserves enough attention
-on its own, but in brief, functions that accept multiple types *throw
-away* information that the caller often has, and might wish to make use
-of -- which type they *actually have* and which behavior of the function
-they wish to take part in.
+The second case where :func:`hasattr` is occasionally seen is for
+doing "type" dispatch. A function that might accept objects of
+different types (under our Python definition of type) chooses an
+implementation by inspecting the presence or lack of particular
+identifying attributes or methods. Developers occasionally find
+virtue in this usage, especially over the alternative -- use of
+:ref:`isinstance() <isinstance-vs-duck-typing>`, and rightfully so, but
+we prefer *avoiding functions that accept multiple types* to begin with,
+in favor of separate callables with defined, homogeneous APIs. Like many
+topics, this one deserves enough attention on its own, but in brief,
+functions that accept multiple types *throw away* information that the
+caller often has, and might wish to make use of -- which type they
+*actually have* and which behavior of the function they wish to take
+part in.
 
 Beyond the two philosophical reasons above, which we find sufficient
 on their own merits, :func:`hasattr` has an unfortunate *breaking*
@@ -173,8 +174,6 @@ recommend always using ``if getattr(obj, "attr", None) is None`` (or
 some other sentinel value as appropriate).
 
 * :func:`id`
-* :func:`input`
-* :func:`issubclass`
 * :func:`reload`
 * :func:`round`
 * @\ :func:`staticmethod`
