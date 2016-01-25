@@ -69,11 +69,14 @@ The following is a brief list:
 #################################################
 
 
-:func:`globals` & :func:`locals`
+:func:`globals` / :func:`locals`
 ################################
 
 
-* :func:`cmp`
+:func:`cmp`
+###########
+
+
 * :func:`callable`
 * :func:`filter`
 * :func:`hasattr`
@@ -205,6 +208,10 @@ these libraries when value classes are desired.
         Similar arguments proposed in the `characteristic`_ documentation
 
 .. _characteristic: http://characteristic.readthedocs.org/en/stable/
+
+
+ABCs
+####
 
 
 Frequently Asked Questions
