@@ -108,6 +108,9 @@ extlinks = dict(
     (k, (urljoin(url, "%s.html"), None))
     for k, (url, _) in intersphinx_mapping.iteritems()
 )
+extlinks.update(
+    pybug=("https://bugs.python.org/issue%s", None),
+)
 
 rst_epilog = """
 .. github-comments::

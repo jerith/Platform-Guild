@@ -57,6 +57,8 @@ namespace, available without any imports) whose use is *strongly discouraged*.
 
 The following is a brief list:
 
+.. _isinstance-vs-duck-typing:
+
 :func:`isinstance`
 ##################
 
@@ -76,10 +78,93 @@ The following is a brief list:
 :func:`cmp`
 ###########
 
+Uses of :func:`cmp` are often confusing to read, especially for beginners.
+
+This is especially true when developers use :func:`cmp` for only *one* of the
+return values, i.e.
+
+.. code-block:: python
+
+    if cmp(x, y) < 0:
+        do_something()
+
+is a well-obfuscated version of
+
+.. code-block:: python
+
+    if x < y:
+        do_something()
+
+Even the remaining usages of :func:`cmp` are generally better served via
+the :mod:`operator` module.
 
 * :func:`callable`
 * :func:`filter`
-* :func:`hasattr`
+
+
+:func:`hasattr`
+###############
+
+There are a number of situations in which :func:`hasattr` is occasionally used.
+The first is as a "cheap replacement" for an initialization of an object which
+will undergo a state transition. Wow! that was wordy -- here's an example:
+
+.. code-block:: python
+
+    class Database(object):
+        def connect(self, host):
+            self.connection = self._really_connect(host)
+
+We discourage this use because we prefer that objects' APIs stay
+*consistent* throughout their lifetimes. There are a number of other
+ways to represent state transitions, but even in cases such as the
+above, we strongly prefer initializing the relevant attribute to a
+sentinel (often ``None``) which can be checked for.
+
+The second case where :func:`hasattr` is occasionally seen is for doing
+"type" dispatch. A function that might accept objects of different types
+(under our Python definition of type) chooses an implementation by
+inspecting the presence or lack of particular identifying attributes or
+methods. Developers occasionally find virtue in this usage, especially
+over the alternative -- use of :ref:`isinstance-vs-duck-typing`, and
+rightfully so, but we prefer *avoiding functions that accept multiple
+types* to begin with, in favor of separate callables with defined,
+homogeneous APIs. Like many topics, this one deserves enough attention
+on its own, but in brief, functions that accept multiple types *throw
+away* information that the caller often has, and might wish to make use
+of -- which type they *actually have* and which behavior of the function
+they wish to take part in.
+
+Beyond the two philosophical reasons above, which we find sufficient
+on their own merits, :func:`hasattr` has an unfortunate *breaking*
+:pybug:`bug <2196>` which makes its usage inadvisable regardless of the
+above.
+
+In brief, it checks for attributes via the equivalent of:
+
+.. code-block:: python
+
+    try:
+        getattr(obj, "attr")
+    except:
+        return False
+    else:
+        return True
+
+i.e., it silently swallows exceptions, even ones other than
+:exc:`AttributeError`, for objects that in fact *do* have the attribute
+in some sense.
+
+.. seealso::
+
+    `<https://mail.python.org/pipermail/python-dev/2010-August/103178.html>`_
+        A python-dev mailing list thread about the above.
+
+In the rare case where :func:`hasattr` would be necessary (such as when
+checking for an attribute on an object you do not control), we therefore
+recommend always using ``if getattr(obj, "attr", None) is None`` (or
+some other sentinel value as appropriate).
+
 * :func:`id`
 * :func:`input`
 * :func:`issubclass`
