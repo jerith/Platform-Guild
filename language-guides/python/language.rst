@@ -152,8 +152,8 @@ In brief, it checks for attributes via the equivalent of:
         return True
 
 i.e., it silently swallows exceptions, even ones other than
-:exc:`AttributeError`, for objects that in fact *do* have the attribute
-in some sense.
+:exc:`~python:exceptions.AttributeError`, for objects that in fact *do*
+have the attribute in some sense.
 
 .. seealso::
 
