@@ -10,6 +10,8 @@ app
 berkshelf
 builtin
 bytecode
+callable
+callables
 changeset
 changesets
 codebase

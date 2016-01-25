@@ -158,7 +158,8 @@ have the attribute in some sense.
 .. seealso::
 
     `<https://mail.python.org/pipermail/python-dev/2010-August/103178.html>`_
-        A python-dev mailing list thread about the above.
+        A `python-dev <https://mail.python.org/mailman/listinfo/python-dev>`_
+        mailing list thread about the above.
 
 In the rare case where :func:`hasattr` would be necessary (such as when
 checking for an attribute on an object you do not control), we therefore
