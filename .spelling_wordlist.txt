@@ -68,6 +68,7 @@ tox
 traceback
 tracebacks
 unremoved
+upconvert
 versioning
 virtualenv
 workflows

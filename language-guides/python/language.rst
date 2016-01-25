@@ -72,6 +72,23 @@ The following is a brief list:
 :func:`basestring` / :func:`file` / :class:`long`
 #################################################
 
+The use of these types is discouraged because their uses
+currently are typically only in association with `isinstance()
+<isinstance-vs-duck-typing>`, which is itself discouraged.
+
+:func:`basestring` is an implementation detail of the inheritance
+hierarchy of Python 2's text types. :class:`long` is an implementation
+detail of Python 2's distinction between fixed width and arbitrary
+width integers, a distinction that isn't relevant in use cases that do
+not involve type checking. Developers should use `str` (or `unicode`,
+but see `below <calling-unicode>`) to construct `str`\ s, and `int` to
+construct (either) `int` or `long`\ s, as `int` will auto-upconvert.
+
+:func:`file` is similar, in that its use to construct (open)
+files is redundant with the presence of :func:`open`. Arbitrarily
+but pervasively, the community preference is to `always use open
+<http://article.gmane.org/gmane.comp.python.devel/60890>`_.
+
 
 :func:`compile` / :func:`eval` / :func:`execfile` / :func:`input`
 #################################################################
@@ -191,7 +208,12 @@ cautioned unless their limitations are understood:
 * :func:`print` & :func:`raw_input`
 * :func:`reduce`
 * :func:`super`
-* :func:`unicode`
+
+
+.. _calling-unicode:
+
+:func:`unicode`
+###############
 
 
 .. _discouraged-stdlib:
