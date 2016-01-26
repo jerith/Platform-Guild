@@ -190,7 +190,6 @@ checking for an attribute on an object you do not control), we therefore
 recommend always using ``if getattr(obj, "attr", None) is None`` (or
 some other sentinel value as appropriate).
 
-* :func:`id`
 * :func:`reload`
 * :func:`round`
 * @\ :func:`staticmethod`
@@ -204,6 +203,7 @@ cautioned unless their limitations are understood:
 * :func:`bin`, :func:`hex` & :func:`oct`
 * :func:`delattr`
 * :func:`dir`
+* :func:`id`
 * :func:`map`
 * :func:`print` & :func:`raw_input`
 * :func:`reduce`
