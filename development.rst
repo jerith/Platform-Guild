@@ -10,9 +10,6 @@ Homebrew
 GNU :program:`Parallel`
 -----------------------
 
-iTerm2
-------
-
 :program:`awscli`
 -----------------
 
