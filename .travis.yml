@@ -1,12 +1,9 @@
 sudo: required
-dist: precise
-language: python
-python:
-  - pypy
+dist: trusty
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y libenchant-dev
 install:
-  - pip install tox
+  - pypy -m pip install tox
 script:
   - tox
