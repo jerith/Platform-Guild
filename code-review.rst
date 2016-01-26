@@ -188,8 +188,14 @@ are hardened to at least help identify potential configuration issues if
 possible, should a human miss a potential issue.
 
 
+.. _ready-for-review:
+
 *When* Should Code Be Reviewed
 ==============================
+
+.. seealso::
+
+    `pre-review`
 
 
 Style & Static Checkers
@@ -224,6 +230,8 @@ branches with their changes, so that the reviewer has access to the full
 context of the changes.
 
 
+.. _pre-review:
+
 Author Pre-review
 =================
 
@@ -249,6 +257,18 @@ the guild) find the former to be more tenable.
 
 The guild therefore *strongly encourages* but does not mandate
 pre-review by the author of a code review.
+
+.. note::
+
+    This incomplete mandate is for leaving *comments* with explanations. We
+    recognize an even more basic notion of pre-review -- a simple reading of a
+    proposed diff before submission by the author -- as being *self-evidently
+    mandatory*.
+
+    Authors should use e.g. ``git diff`` to do so and are encouraged to read
+    through their own changes carefully and slowly to ensure they are correct,
+    complete, free from unrelated changes and ultimately `ready for review
+    <ready-for-review>`.
 
 
 Summary
