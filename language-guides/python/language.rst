@@ -323,6 +323,21 @@ these libraries when value classes are desired.
 .. _characteristic: http://characteristic.readthedocs.org/en/stable/
 
 
+:mod:`pickle`
+-------------
+
+Beyond the reasoning outlined in :ref:`serializing arbitrary objects
+<serializing-objects>`, the standard library's :mod:`pickle` module suffers
+from an unfortunate calamity of problems. It's completely insecure from
+untrusted input and is also generally completely insuitable for its primary
+purpose of serializing objects because it offers no ability to evolve an
+object's API once pickled data has been saved.
+
+Its usage in any capacity is strongly discouraged. Serialize data, not objects.
+
+.. seealso::
+
+
 ABCs
 ####
 
@@ -352,6 +367,8 @@ How Do I...
     namespace! Its usage is `strongly discouraged <discouraged-builtins>`
     because its behavior in the above situation is essentially to do the
     simplistic thing, and not update any references.
+
+.. _serializing-objects:
 
 ... (copy|serialize) arbitrary Python objects?
     Generally speaking, you don't, can't and shouldn't. You need to know what
