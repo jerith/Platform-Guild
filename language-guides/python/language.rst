@@ -323,19 +323,23 @@ these libraries when value classes are desired.
 .. _characteristic: http://characteristic.readthedocs.org/en/stable/
 
 
-:mod:`pickle`
--------------
+:mod:`pickle` / :mod:`marshal` / :mod:`shelve`
+----------------------------------------------
 
 Beyond the reasoning outlined in :ref:`serializing arbitrary objects
 <serializing-objects>`, the standard library's :mod:`pickle` module suffers
 from an unfortunate calamity of problems. It's completely insecure from
 untrusted input and is also generally completely insuitable for its primary
 purpose of serializing objects because it offers no ability to evolve an
-object's API once pickled data has been saved.
+object's API once pickled data has been persisted.
 
 Its usage in any capacity is strongly discouraged. Serialize data, not objects.
 
 .. seealso::
+
+    `Pickles are for Delis, Not Software
+    <https://www.youtube.com/watch?v=7KnfGDajDQw>`_
+        A talk given by Alex Gaynor on the subject, with similar conclusion.
 
 
 ABCs

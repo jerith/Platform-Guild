@@ -40,7 +40,7 @@ between patch and minor releases, there are a small number of exceptions
 (most prominently TLS certificate verification, which is now turned *on*
 by default [finally] as of 2.7.10 in :pep:`476`).
 
-Additionally, installing packages directly into the global system
+Additionally, installing `packages <package>`  directly into the global system
 Python can conflict with package installations done by a system package
 manager, or worse with dependencies of the operating system itself.
 
@@ -106,64 +106,36 @@ how PyPy is deployed to our production systems.
     For instance, PyPy 4.0.1 implements Python 2.7.11.
 
 
-virtualenv
-==========
+:program:`virtualenv`
+=====================
 
+Each Python interpreter has associated with it a number of directories which it
+will search when attempting to import a module (specifically when searching for
+a file-backed module). `packages <package>` and `modules <module>` contained in
+one of these directories are said to be :dfn:`installed`, and will be locatable
+at runtime.  These directories are accessible at runtime via :attr:`sys.path`
+or can be modified externally via :envvar:`PYTHONPATH` (although modifying it
+in either way is *strongly discouraged*).
 
-Legacy Vagrant VMs
-==================
+:pypi:`virtualenv` is an *isolation mechanism* for Python.
 
-While we are migrating away from Chef, it is still possible to run some of our
-applications in a Chef-provisioned Vagrant VM. For example Thidwick repo
-contains Vagrant configuration that starts the application, the Kyoto database
-and the Kafka instance inside a single CentOS VM.
+It allows for the creation of "virtual", isolated environments which appear to
+be full Python installations with their own paths for installed packages.
 
-To get started (tested with Thidwick, Vagrant 1.7.4, Chef DK 0.10.0 and
-VirtualBox 5.0.4):
+After installation in the usual manner, via e.g. ``pip install --user
+virtualenv``, running ``virtualenv -p pypy venv`` will create a directory named
+:file:`venv` (in the current working directory) containing a number of folders.
+Most notably, it will contain a :file:`venv/bin/pypy` executable which is
+completely isolated from the global Python installation. Installing packages
+into that Python, via :file:`venv/bin/pip`, which will also be pre-installed,
+will have no effect on the global directories, and vice versa.
 
-1. Install `VirtualBox <https://www.virtualbox.org>`_
+.. warning::
 
-#. Install `Vagrant <https://www.vagrantup.com/downloads.html>`_
-
-#. Install `ChefDK <https://downloads.chef.io/chef-dk>`_. For easy integration
-   with Vagrant plugins, add this line to your ~/.profile file::
-
-        $ eval "$(chef shell-init bash)"
-
-   This will change your environment so the ChefDK ruby is used instead
-   of the system-wide installation. It should be possible to configure
-   system-wide ruby to work with vagrant plugins - if you know how to do
-   that, please update this README.
-
-#. Navigate to the *vm* directory
-#. Install vagrant plugins::
-
-        $ vagrant plugin install berkshelf chef
-
-#. Launch the VM::
-
-        $ vagrant up
-
-   This will download and save the base image, and run chef to
-   automatically configure the VM. If you are prompted to select a
-   network adapter for bridged networking, choose whichever adapter is
-   connected (usually WiFi).
-
-   Virtual machine is configured to use "private network" mode:
-   VirtualBox will create a new network adapter on your machine, usually
-   called ``vboxnet0``. The VM is connected to the same network and all
-   its ports are exposed. To find out the IP of the VM, run 'vagrant
-   ssh' and execute 'ifconfig' on the VM.
-
-
-Vagrant Cheat-Sheet
-
-- *vagrant ssh*: SSH into the VM
-- *vagrant halt*: shut down VM
-- *vagrant up*: restart the VM
-- *vagrant reload*: restart guest
-- *vagrant destroy*: delete VM
-- *vagrant provision*: re-run Chef
+    For simplicity's sake, activation of virtualenvs, which can be done via
+    ``source venv/bin/activate`` is somewhat discouraged, because it introduces
+    even more complexity (shell manipulation) to an already complex (even
+    complicated or hacky -- don't read its implementation) tool.
 
 
 Debuggers
@@ -266,11 +238,19 @@ any editor not named Notepad can be configured to do so (including nano!).
 Avoiding Common Gotchas
 =======================
 
+.. seealso::
+
+    This section concerns a number of common development environment
+    gotchas. `language` has some more general information on possible
+    hiccups.
+
 There are a number of small tweaks that developers are encouraged to make, in
 the hopes that they will help avoid a number of common gotchas.
 
 The most important of which is to **set** :envvar:`PYTHONDONTWRITEBYTECODE` (to
-``true`` or any other non-empty value, via e.g.::
+``true`` or any other non-empty value, via e.g.
+
+.. code-block:: sh
 
     PYTHONDONTWRITEBYTECODE=true; export PYTHONDONTWRITEBYTECODE
 
@@ -292,11 +272,100 @@ installation processes.
     <http://doc.pypy.org/en/latest/config/objspace.lonepycfiles.html>`_. It
     does so for similar reasoning.
 
-.. seealso::
+.. warning::
 
-    This section concerns a number of common development environment
-    gotchas. `language` has some more general information on possible
-    hiccups.
+    `tox` currently has some `unfortunate behavior
+    <http://lists.idyll.org/pipermail/testing-in-python/2015-April/006376.html>`_
+    that *unsets* :envvar:`PYTHONDONTWRITEBYTECODE` when executing tox
+    environments, causing :file:`.pyc` files to potentially reappear.
+
+    Be mindful of this until the behavior is fixed upstream.
+
+In addition to disabling bytecode serialization, developers are also encouraged
+to change Python's default warning behavior. Somewhat controversially, as of
+Python 2.7, Python's behavior is to *hide* many warnings emitted by the
+:mod:`warnings` module by default.
+
+The `reasoning
+<https://mail.python.org/pipermail/stdlib-sig/2009-November/000789.html>`_
+provided for the change was to reduce noise seen by end-users from libraries
+invoked on their behalf, which they potentially do not have the ability to
+correct.
+
+Developers are encouraged to turn warnings back on! The potential for not
+seeing important warnings during development is well worth the noise. Our
+recommendation is also ultimately to treat emitted warnings as failures for
+guild test suites.
+
+.. code-block:: sh
+
+    PYTHONWARNINGS='default,ignore:Not importing directory:ImportWarning'
+    export PYTHONWARNINGS
+
+will cause Python to emit each warning once (and then to hide successive
+instances of it). Note, confusingly, that the default behavior is *different*
+from setting the above to ``"default"``.
+
+The section at the end (concerning import warnings) will hide a specific,
+generally meaningless warning, concerning paths that do not contain
+:file:`__init__.py` files encountered during imports, which typically are paths
+that simply do not contain Python files, and can safely be ignored.
+
+
+Legacy Vagrant VMs
+==================
+
+While we are migrating away from Chef, it is still possible to run some of our
+applications in a Chef-provisioned Vagrant VM. For example Thidwick repo
+contains Vagrant configuration that starts the application, the Kyoto database
+and the Kafka instance inside a single CentOS VM.
+
+To get started (tested with Thidwick, Vagrant 1.7.4, Chef DK 0.10.0 and
+VirtualBox 5.0.4):
+
+1. Install `VirtualBox <https://www.virtualbox.org>`_
+
+#. Install `Vagrant <https://www.vagrantup.com/downloads.html>`_
+
+#. Install `ChefDK <https://downloads.chef.io/chef-dk>`_. For easy integration
+   with Vagrant plugins, add this line to your ~/.profile file::
+
+        $ eval "$(chef shell-init bash)"
+
+   This will change your environment so the ChefDK ruby is used instead
+   of the system-wide installation. It should be possible to configure
+   system-wide ruby to work with vagrant plugins - if you know how to do
+   that, please update this README.
+
+#. Navigate to the *vm* directory
+#. Install vagrant plugins::
+
+        $ vagrant plugin install berkshelf chef
+
+#. Launch the VM::
+
+        $ vagrant up
+
+   This will download and save the base image, and run chef to
+   automatically configure the VM. If you are prompted to select a
+   network adapter for bridged networking, choose whichever adapter is
+   connected (usually WiFi).
+
+   Virtual machine is configured to use "private network" mode:
+   VirtualBox will create a new network adapter on your machine, usually
+   called ``vboxnet0``. The VM is connected to the same network and all
+   its ports are exposed. To find out the IP of the VM, run 'vagrant
+   ssh' and execute 'ifconfig' on the VM.
+
+
+Vagrant Cheat-Sheet
+
+- *vagrant ssh*: SSH into the VM
+- *vagrant halt*: shut down VM
+- *vagrant up*: restart the VM
+- *vagrant reload*: restart guest
+- *vagrant destroy*: delete VM
+- *vagrant provision*: re-run Chef
 
 
 Further Reading
