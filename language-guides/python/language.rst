@@ -337,8 +337,7 @@ Its usage in any capacity is strongly discouraged. Serialize data, not objects.
 
 .. seealso::
 
-    `Pickles are for Delis, Not Software
-    <https://www.youtube.com/watch?v=7KnfGDajDQw>`_
+    `Pickles are for Delis, Not Software <https://www.youtube.com/watch?v=7KnfGDajDQw>`_
         A talk given by Alex Gaynor on the subject, with similar conclusion.
 
 

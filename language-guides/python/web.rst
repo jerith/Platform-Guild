@@ -35,8 +35,8 @@ Specifically, its interface is:
 
     :argument `collections.Mapping` environ: the :dfn:`WSGI environment`, a
         mapping containing all of the parsed information from the HTTP request,
-        along with arbitrary additional objects populated by the `WSGI
-        container` or by any `WSGI middleware`.
+        along with arbitrary additional objects populated by the WSGI
+        container or by any `WSGI middleware`.
 
     :argument `callable` start_response: A callable (a callback) which the
         application can call, taking 2 arguments, a response status and an
@@ -51,8 +51,8 @@ Specifically, its interface is:
 
 
 The name of the callable is unimportant, as are the names used for the two
-parameters (they're passed positionally into the callable by the `WSGI
-container` as discussed below) though the ones presented above are typical.
+parameters (they're passed positionally into the callable by the WSGI
+container as discussed below) though the ones presented above are typical.
 
 .. seealso::
 
@@ -73,10 +73,17 @@ WSGI-Based Frameworks
 
 .. seealso::
 
-    :doc:`python:howto/webservers.rst`
+    :python:`howto/webservers`
         An outdated-but-interesting document from the standard library
         documentation, with more contextual and background information about
         Python on the web.
 
 
 .. glossary::
+
+    WSGI middleware
+        Abstractly, any callable which takes a WSGI application as an argument
+        and returns another WSGI application.
+
+        Middleware is a mechanism for composing features onto WSGI
+        applications.
