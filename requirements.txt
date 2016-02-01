@@ -3,6 +3,6 @@ pyenchant
 betterpath
 sphinx
 sphinxcontrib-cheeseshop
-sphinxcontrib-githubcomments>=0.4.4
+sphinxcontrib-githubcomments>=0.4.3
 sphinxcontrib-spelling
 vcversioner
