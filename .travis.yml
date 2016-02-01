@@ -4,6 +4,6 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y libenchant-dev
 install:
-  - pypy -m pip install --user tox
+  - pypy -m pip install --user detox
 script:
-  - tox
+  - detox
