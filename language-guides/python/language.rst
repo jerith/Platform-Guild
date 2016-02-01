@@ -329,7 +329,7 @@ these libraries when value classes are desired.
 Beyond the reasoning outlined in :ref:`serializing arbitrary objects
 <serializing-objects>`, the standard library's :mod:`pickle` module suffers
 from an unfortunate calamity of problems. It's completely insecure from
-untrusted input and is also generally completely insuitable for its primary
+untrusted input and is also generally completely unsuitable for its primary
 purpose of serializing objects because it offers no ability to evolve an
 object's API once pickled data has been persisted.
 

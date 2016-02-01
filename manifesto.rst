@@ -7,7 +7,7 @@ Everything That Can Be Real-Time, Should Be Real-Time
 =====================================================
 
 Moving computation into real-time best models the way the events occur --
-reactively. It also maximizes the harddware resources available, as we amortize
+reactively. It also maximizes the hardware resources available, as we amortize
 our processing costs over time, rather than having workflows with *artificial*
 peaks and valleys of resource usage. Additionally, real-time streams are
 trivially convertible to batch workflows if necessary or desired, while the

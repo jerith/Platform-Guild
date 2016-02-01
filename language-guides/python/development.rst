@@ -113,7 +113,7 @@ Each Python interpreter has associated with it a number of directories which it
 will search when attempting to import a module (specifically when searching for
 a file-backed module). `packages <package>` and `modules <module>` contained in
 one of these directories are said to be :dfn:`installed`, and will be locatable
-at runtime.  These directories are accessible at runtime via :attr:`sys.path`
+at runtime.  These directories are accessible at runtime via :data:`sys.path`
 or can be modified externally via :envvar:`PYTHONPATH` (although modifying it
 in either way is *strongly discouraged*).
 

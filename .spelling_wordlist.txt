@@ -1,12 +1,14 @@
 CC'ing
 CI
 CPython
+Gaynor
 Homebrew
 RPython
 Thidwick
 amongst
 ansible
 app
+auditable
 berkshelf
 builtin
 bytecode
@@ -29,6 +31,7 @@ failsafe
 # FIXME: this should be in the tokenizer? It's for faux pas
 faux
 featureful
+hacky
 # FIXME: this should be in the tokenizer? It's for ad hoc
 hoc
 iTerm
@@ -36,6 +39,9 @@ ifconfig
 impactful
 inbox
 installable
+iterable
+locatable
+middleware
 modularity
 namedtuple
 namespace
@@ -44,10 +50,12 @@ orderable
 plugin
 plugins
 positionality
+positionally
 pre
 precompiled
 profiler
 profilers
+reactively
 reimplement
 repo
 reproducibility
@@ -69,6 +77,10 @@ traceback
 tracebacks
 unremoved
 upconvert
+untrusted
+# FIXME: this should be in the tokenizer? It's for vice versa
+versa
 versioning
 virtualenv
+virtualenvs
 workflows
