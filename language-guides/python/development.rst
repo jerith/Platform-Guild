@@ -137,6 +137,37 @@ will have no effect on the global directories, and vice versa.
     even more complexity (shell manipulation) to an already complex (even
     complicated or hacky -- don't read its implementation) tool.
 
+.. note::
+
+    A general note about shells:
+
+    When executing :samp:`{foo}` in a shell, the shell walks :envvar:`PATH`
+    looking for binaries in any directory mentioned whose name is
+    :samp:`{foo}`. Once such a binary is encountered, the shell executes it,
+    and *caches the absolute path to the binary so that it need not do the path
+    walking again*.
+
+    This detail often confuses new users (of shells or otherwise).
+
+    Note even further that :samp:`which {foo}` can "lie"! More accurately, the
+    path returned by ``which foo`` can be one which is *not* the :samp:`{foo}`
+    binary that will be invoked when unqualified.
+
+    Developers are encouraged to prefer :samp:`type -a {foo}` for investigating
+    the location(s) of a :samp:`{foo}`, and to familiarize themselves with
+    :program:`rehash` (``hash -r`` in :program:`bash`) which purges the
+    :envvar:`PATH` cache.
+
+.. seealso::
+
+    :pypi:`virtualenvwrapper`
+        A utility that wraps :program:`virtualenv` with a number of shell
+        functions whose core goal is to manage a central repository of
+        virtual environments.
+
+    :pypi:`mkenv`
+        A similar tool with a slightly different take.
+
 
 Debuggers
 =========
