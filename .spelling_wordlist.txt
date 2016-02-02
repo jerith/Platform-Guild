@@ -5,6 +5,7 @@ Gaynor
 Homebrew
 RPython
 Thidwick
+aforementioned
 amongst
 ansible
 app
@@ -34,6 +35,7 @@ featureful
 hacky
 # FIXME: this should be in the tokenizer? It's for ad hoc
 hoc
+hostname
 iTerm
 ifconfig
 impactful
@@ -49,6 +51,7 @@ nano
 orderable
 plugin
 plugins
+preinstalled
 positionality
 positionally
 pre
