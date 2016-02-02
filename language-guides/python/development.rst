@@ -29,16 +29,20 @@ Bullet version:
 Interpreters
 ============
 
-Most \*nix operating systems, including Linux and OS X, come with an
-installed Python interpreter because Python is often used by the system.
-It is *not* however recommended to use this Python for development for a
-number of reasons.
+Most \*nix operating systems, including Linux and OS X, come with an installed
+Python interpreter because Python is often used by the system.  It is *not*
+however recommended to use this Python for development for a number of reasons.
 
-The system Python can differ in minor version. While Python (the
-language) is quite reliable when it comes to backwards compatibility
-between patch and minor releases, there are a small number of exceptions
-(most prominently TLS certificate verification, which is now turned *on*
-by default [finally] as of 2.7.10 in :pep:`476`).
+The system Python can differ in minor version. While Python (the language) is
+quite reliable when it comes to backwards compatibility between patch and minor
+releases, there are a small number of compatibility-breaking changes which
+developers are likely to encounter which make more recent minor versions
+preferable over an older version which may have been preinstalled
+[#noncompat]_.
+
+.. [#noncompat] The most prominent recent incompatible change is the enabling
+                of TLS certificate hostname verification, which is now turned
+                *on* by default [finally] as of 2.7.10 in :pep:`476`.
 
 Additionally, installing `packages <package>`  directly into the global system
 Python can conflict with package installations done by a system package
