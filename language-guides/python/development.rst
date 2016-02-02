@@ -162,6 +162,13 @@ will have no effect on the global directories, and vice versa.
     :program:`rehash` (``hash -r`` in :program:`bash`) which purges the
     :envvar:`PATH` cache.
 
+    .. envvar:: PATH
+
+        A (colon-delimited) set of directories which will be searched for
+        binary executables.
+
+        .. seealso:: `<https://en.wikipedia.org/wiki/PATH_%28variable%29>`_
+
 .. seealso::
 
     :pypi:`virtualenvwrapper`
