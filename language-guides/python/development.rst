@@ -264,7 +264,7 @@ running program at frequent intervals, recording the stack frames which were
 active when the sample occurs.
 
 Its performance is such that it is *suitable to run in production*, unlike the
-aformentioned standard library module, which often introduces 10 or 100x
+aforementioned standard library module, which often introduces 10 or 100x
 slowdowns.
 
 .. note::

@@ -5,7 +5,6 @@ Gaynor
 Homebrew
 RPython
 Thidwick
-aforementioned
 amongst
 ansible
 app
