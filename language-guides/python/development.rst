@@ -244,6 +244,34 @@ interpreter.
 Profilers
 =========
 
+There are a number of broad axes along which a developer might want to profile
+a given piece of code.
+
+For timing measurements the :mod:`cProfile` standard library module can offer
+basic tracing and timing of function calls and dispatches when executing a
+script.
+
+Slightly more powerfully (albeit still a bit immature) is :pypi:`vmprof`.
+:pypi:`vmprof` is a :dfn:`statistical profiler` which samples execution of a
+running program at frequent intervals, recording the stack frames which were
+active when the sample occurs.
+
+Its performance is such that it is *suitable to run in production*, unlike the
+aformentioned standard library module, which often introduces 10 or 100x
+slowdowns.
+
+.. note::
+
+    Of course, developers should measure the impact of any significant change
+    to an application, including the introduction of an online profiler.
+
+:pypi:`line_profiler` is also worthy of mention, as it can give more
+granularity than the standard library module by reporting on lines rather than
+function calls.
+
+For profiling memory usage, :pypi:`memory_profiler` is available and can offer
+insight into heap allocation and object lifetimes.
+
 
 .. _editor:
 
