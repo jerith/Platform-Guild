@@ -78,6 +78,8 @@ toolchain
 tox
 traceback
 tracebacks
+# Yeah this ain't a word. Wanna fight about it?
+unconfusingly
 unremoved
 upconvert
 untrusted
