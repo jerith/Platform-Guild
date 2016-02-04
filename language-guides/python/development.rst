@@ -202,12 +202,29 @@ first starting the debugger.
 
 It can be installed in the `usual way <pip>`, via :code:`pip install pudb`.
 
-Many `editor`\ s and `test runner`\ s also integrate with a debugger.
+Many `editors <editor>` and `test runners <test runner>` also integrate with a
+debugger.
+
+.. seealso::
+
+    `winpdb <http://winpdb.org/>`_
+
+        An unconfusingly named cross-platform debugger with some other
+        interesting features.
+
+    :program:`bpdb`
+
+        A debugger that ships with :ref:`bpython <bpython>`
+
+    Your `Editor <editor>`
+
+        Which may offer integration with a debugger. E.g., for PyCharm, see
+        `<https://www.jetbrains.com/pycharm/help/python-debugger.html>`_
 
 .. note::
 
-    In many, if not all cases, the use of a debugger is a crutch that indicates
-    a gap in unit test coverage or general understanding of the code base.
+    In many cases, the use of a debugger is a crutch that indicates a gap in
+    unit test coverage or general understanding of the code base.
 
     Guild members are encouraged to follow up uses of a debugger by improving
     the coverage or maintainability of the section of the code that they needed
@@ -233,8 +250,10 @@ command line options. In particular, ``python -c`` and ``python -i`` are useful
 for development, and ``python -m`` is an oft-used mechanism for running
 executable modules. See :manpage:`python(1)` for more details.
 
+.. _bpython:
+
 Developers looking for more than the above are encouraged to try `bpython
-<http://bpython-interpreter.org/screenshots.html>`_, which offers real-time
+<http://bpython-interpreter.org/screenshots.html>`__, which offers real-time
 suggestions, syntax highlighting and other useful features. It is installable
 in the usual way, via ``pip install --user bpython``.
 
