@@ -16,8 +16,14 @@ GNU :program:`Parallel`
 :program:`diffutils`
 --------------------
 
+:program:`mtr`
+------------------
+
 :program:`par`
 --------------
+
+:program:`dstat`
+------------------
 
 .. _strace:
 
