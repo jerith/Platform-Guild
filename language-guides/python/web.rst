@@ -2,11 +2,13 @@
 Python for the Web
 ==================
 
+.. _wsgi:
+
 WSGI
 ====
 
-:ref:`WSGI <wsgi>` is a specification that defines an *interface* between web
-servers and applications.
+:ref:`WSGI <python:wsgi>` is a specification that defines an *interface*
+between web servers and applications.
 
 Succinctly, the WSGI specification defines two components: :dfn:`WSGI
 container`\ s and :dfn:`WSGI application`\ s. Containers are web servers. They
