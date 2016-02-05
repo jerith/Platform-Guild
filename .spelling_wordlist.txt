@@ -2,7 +2,6 @@ CC'ing
 CI
 CPython
 Gaynor
-Homebrew
 RPython
 Thidwick
 amongst
@@ -31,9 +30,11 @@ failsafe
 # FIXME: this should be in the tokenizer? It's for faux pas
 faux
 featureful
+formulae
 hacky
 # FIXME: this should be in the tokenizer? It's for ad hoc
 hoc
+homebrew
 hostname
 iTerm
 ifconfig
