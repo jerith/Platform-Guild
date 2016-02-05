@@ -6,8 +6,8 @@ There are a number of technologies and components that have been
 *sunsetted* or *deprecated*. Commonly a sunsetted technology has been
 deprecated in favor of a newer choice.
 
-Technologies and software listed below has been sunsetted, and
-references to it, in code or prose within the platform, are generally
+Technologies and software listed below have been sunsetted, and
+references to them in code or prose within the platform are generally
 the results of lack of time to fully purge them.
 
 When working in an area containing references to any mentioned
