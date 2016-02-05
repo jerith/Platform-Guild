@@ -28,7 +28,8 @@ One potentially unique or useful form of runtime introspection is the ability
 to attach and inspect running processes by *executing code*.
 
 In interpreted languages such as Python, there is at least one "out of the box"
-solution for exposing in-process attachment via :mod:`twisted.conch.manhole`.
+solution for exposing in-process attachment via `twisted.conch.manhole
+<http://twistedmatrix.com/documents/current/api/twisted.conch.manhole.html>`_.
 
 Instructions for doing so in :ref:`WSGI <WSGI>` applications, such as many our
 own, can be found at
