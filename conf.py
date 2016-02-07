@@ -326,7 +326,7 @@ linkcheck_workers = 10  # threads
 
 # -- Options for sphinxcontrib-cheeseshop ---------------------------------
 
-cheeseshop_url = "https://pypi.python.org/pypi"
+cheeseshop_url = "https://warehouse.python.org/project"
 
 
 # -- Options for sphinxcontrib-spelling -----------------------------------
