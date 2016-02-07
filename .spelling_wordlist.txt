@@ -3,6 +3,7 @@ CI
 CPython
 Gaynor
 RPython
+Searls
 Thidwick
 amongst
 ansible
