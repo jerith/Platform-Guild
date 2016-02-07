@@ -91,4 +91,5 @@ versa
 versioning
 virtualenv
 virtualenvs
+wiki
 workflows
