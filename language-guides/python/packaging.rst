@@ -175,18 +175,28 @@ discussed above such that versions are specified in exactly one place*.
 
 * Create an initial version with or without any concrete contents:
 
-    $ git tag -a v0.1.0 -m "Create a first version"
+    .. code-block:: sh
+
+        git tag -a v0.1.0 -m "Create a first version"
 
 * Test the installation by attempting to install the package with `pip`:
 
-    $ pip install --user .
+    .. code-block:: sh
+
+        pip install --user .
 
 An example can be found in many existing GitHub repositories within the
-Magnetic organization, including e.g. `Pier <https://github.com/Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29>`_
-
-See the `vcversioner` documentation for more details.
+Magnetic organization, including e.g. `Pier
+<https://github.com/Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29>`_.
 
 .. seealso::
+
+    `mkpkg <https://github.com/Julian/dotfiles/blob/master/bin/mkpkg>`_
+        A short (personalized) script that can be used to create new packages
+        following the above guidelines. :pypi:`cookiecutter` is another.
+
+    The `vcversioner` documentation
+        For further information on its usage.
 
     `packaging:single sourcing the version`
 
