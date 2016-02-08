@@ -65,7 +65,7 @@ themselves*.
 
 .. seealso::
 
-    [IPCR]_ (hour result also quoted in [CUCR]_)
+    [IPCR]_
         which surveyed developers about a number of qualitative factors
         that affect their opinions of other team members when reviewing
         others' code.
