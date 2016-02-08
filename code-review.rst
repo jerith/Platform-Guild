@@ -297,6 +297,13 @@ Reviewers are encouraged to read for maintainability and correctness.
 Stylistic comments are also welcome and encouraged, but should be
 accompanied by changes to an automated style checker.
 
+.. rst-class:: grace-note
+
+     We do not consider any of the above to be completely ironclad.
+
+Our hope is to continue to evolve our process as we learn more about
+what works for us, and what works for others.
+
 
 Further Questions
 =================
@@ -333,6 +340,10 @@ consideration, without making recommendations about their answers:
 
 References
 ==========
+
+.. [BKCR] `Best Kept Secrets of Peer Code Review
+    <https://smartbear.com/lp/ebook/collaborator/secrets-of-peer-code-review/>`_
+    (2006)
 
 .. [CRCS] `Code Review at Cisco Systems
     <http://support.smartbear.com/support/media/resources/cc/book/code-review-cisco-case-study.pdf>`_
