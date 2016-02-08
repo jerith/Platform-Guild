@@ -141,6 +141,11 @@ the reduction in knowledge distribution by:
 *How Many* Reviewers Should There Be?
 =====================================
 
+From anecdotal evidence, we account for the strong presence of the
+:wiki:`Bystander effect <Bystander_Effect>` by encouraging the single
+reviewer to be clearly identified, rather than allowing for "any one
+person"-styled reviews.
+
 
 *What* Can Be Reviewed?
 =======================
