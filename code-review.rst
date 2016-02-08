@@ -8,22 +8,26 @@ Code Review
 Goals
 =====
 
-The code review process, in principle and practice, is designed to identify
-*defects*.
+The code review process, in principle and practice, is designed
+to identify :dfn:`defects` -- gaps in functionality, testability,
+maintainability, readability, resillience, coherence or consistency.
 
-A :dfn:`code reviewer` is tasked with uncovering issues that may have
-been missed during the initial implementation by the :dfn:`author` of
-the changeset.
+A :dfn:`code reviewer` is tasked with uncovering any such issue
+which may have been missed during the initial implementation by the
+:dfn:`author` of the changeset.
 
 The perspective offered by a code review offers feedback to the author
-for each uncovered issue, where issues may be anything from buggy
-implementations, unintentional interactions with existing code, threats
-to future maintainability of the codebase, or gaps in error handling,
-monitoring and reliability.
+for each uncovered defect -- identifying a buggy implementation,
+unintentional interactions with existing code, threats to future
+maintainability of the codebase, or gaps in error handling, monitoring
+and reliability.
 
-Distilled, a code review should focus on ensuring that the proposed new
-code is *correct*, *simple*, *maintainable*, *tested* and *working as
-intended*.
+In short:
+
+.. rst-class:: grace-note
+
+    A second pair of eyes intruduces the opportunity to ensure code is
+    correct, simple, maintainable, tested & working as intended.
 
 A *secondary* goal of code review is to disseminate knowledge of changes
 and the codebase in general throughout the guild, but when in conflict
