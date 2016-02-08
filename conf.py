@@ -112,6 +112,7 @@ extlinks = dict(
 extlinks.update(
     github=("https://github.com/%s", None),
     pybug=("https://bugs.python.org/issue%s", None),
+    wiki=("https://en.wikipedia.org/wiki/%s", None),
 )
 
 rst_epilog = """

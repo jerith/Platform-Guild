@@ -74,10 +74,9 @@ PyPy
 .. todo:: Probably deserves to be extracted out
 
 `PyPy <http://pypy.org/>`__ is a Python interpreter, distinct from
-`CPython <https://en.wikipedia.org/wiki/CPython>`_, that offers
-significant speed and memory benefits (amongst others), allowing Python
-to compete more fairly with the performance of "fully precompiled"
-languages.
+:wiki:`CPython`, that offers significant speed and memory benefits
+(amongst others), allowing Python to compete more fairly with the
+performance of "fully precompiled" languages.
 
 It is used extensively in our production environment.
 
@@ -167,7 +166,7 @@ will have no effect on the global directories, and vice versa.
         A (colon-delimited) set of directories which will be searched for
         binary executables.
 
-        .. seealso:: `<https://en.wikipedia.org/wiki/PATH_%28variable%29>`_
+        .. seealso:: :wiki:`PATH_%28variable%29`
 
 .. seealso::
 
@@ -500,4 +499,4 @@ Glossary
         can be entered and evaluated.
 
         .. seealso::
-            `<https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_
+            :wiki:`Read%E2%80%93eval%E2%80%93print_loop`

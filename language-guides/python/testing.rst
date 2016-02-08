@@ -24,8 +24,7 @@ of choice for a number of reasons:
 Other choices include the frameworks included with
 `py.test <http://pytest.org/latest/>`_ and `nose
 <https://nose.readthedocs.org/en/latest/>`_, along with the various
-`BDD <https://en.wikipedia.org/wiki/Behavior-driven_development>`_
-frameworks.
+:wiki:`BDD <Behavior-driven_development>` frameworks.
 
 Given this choice of framework, there are a wide variety of test runners which
 generally can successfully execute guild-written test suites.
