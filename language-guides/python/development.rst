@@ -92,10 +92,10 @@ It is used extensively in our production environment.
 The PyPy `download page <http://pypy.org/download.html>`_ contains
 installation instructions for a number of operating systems.
 
-On OS X, ``brew install pypy`` via `Homebrew` will install
-the latest release of PyPy. On Linux, using `Portable PyPy
-<https://github.com/squeaky-pl/portable-pypy>`_ is recommended, which is
-how PyPy is deployed to our production systems.
+On OS X, ``brew install pypy`` via `Homebrew` will install the
+latest release of PyPy. On Linux, using :github:`Portable PyPy
+<squeaky-pl/portable-pypy>` is recommended, which is how PyPy is
+deployed to our production systems.
 
 
 .. note::

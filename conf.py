@@ -110,6 +110,7 @@ extlinks = dict(
     for k, (url, _) in intersphinx_mapping.iteritems()
 )
 extlinks.update(
+    github=("https://github.com/%s", None),
     pybug=("https://bugs.python.org/issue%s", None),
 )
 

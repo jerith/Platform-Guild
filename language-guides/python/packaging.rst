@@ -186,12 +186,12 @@ discussed above such that versions are specified in exactly one place*.
         pip install --user .
 
 An example can be found in many existing GitHub repositories within the
-Magnetic organization, including e.g. `Pier
-<https://github.com/Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29>`_.
+Magnetic organization, including e.g. :github:`Pier
+<Magnetic/Pier/blob/9ead80600ab89e7c335781d33cc08ede9d079ffd/setup.py#L28-L29>`.
 
 .. seealso::
 
-    `mkpkg <https://github.com/Julian/dotfiles/blob/master/bin/mkpkg>`_
+    :github:`mkpkg <Julian/dotfiles/blob/master/bin/mkpkg>`
         A short (personalized) script that can be used to create new packages
         following the above guidelines. :pypi:`cookiecutter` is another.
 
