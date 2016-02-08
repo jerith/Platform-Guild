@@ -222,8 +222,8 @@ Discouraged Standard Library Functionality
 ------------------------------------------
 
 
-collections.namedtuple
-######################
+:func:`collections.namedtuple`
+##############################
 
 Guild members are strongly encouraged to *avoid* using
 `collections.namedtuple`.
@@ -339,6 +339,10 @@ Its usage in any capacity is strongly discouraged. Serialize data, not objects.
 
     `Pickles are for Delis, Not Software <https://www.youtube.com/watch?v=7KnfGDajDQw>`_
         A talk given by Alex Gaynor on the subject, with similar conclusion.
+
+
+:class:`subprocess.Popen`\ 's ``shell=True``
+############################################
 
 
 ABCs
