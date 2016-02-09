@@ -161,7 +161,17 @@ the reduction in knowledge distribution by:
 *How Many* Reviewers Should There Be?
 =====================================
 
-From anecdotal evidence, we account for the strong presence of the
+The current recommendation is to limit the official "merge-gating"
+reviewer to *one* person and no more. [BKCR]_ found evidence that having
+multiple reviewers did not significantly or effectively increase the
+number of defects found during reviews.
+
+Anecdotally we note that often in reviews conducted within the guild
+with multiple reviewers, long-running discussions often involve only one
+of the reviewers. It is our hope that *increasing* the responsibility on
+the one reviewer will lead to more careful reviews.
+
+Also from anecdotal evidence, we account for the strong presence of the
 :wiki:`Bystander effect <Bystander_Effect>` by encouraging the single
 reviewer to be clearly identified, rather than allowing for "any one
 person"-styled reviews.
