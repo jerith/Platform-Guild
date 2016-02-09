@@ -161,11 +161,24 @@ separate chunks in a non-trivial, reviewable manner. As a guild, we
 acknowledge this fact but are committed to cultivate this skill due to
 the benefits it offers.
 
+.. sidebar:: Ask!
+
+    Can't figure out how to split up a set of changes, either because of
+    coherence or understandable lack of :ref:`git <git>`-fu? Ask someone
+    to help!
+
 [CUCR]_ also identifies a correlation between the total number of files
 in the changeset and the number of defects uncovered -- more files in
 the review has a negative impact on the number of defects uncovered --
 but it is unclear whether this correlation was done after first removing
 the correlation with line length. See Section VI, Figure 8.
+
+The exact number of lines or files beyond which the number of defects
+found deteriorates varies within small margins within the cited
+articles, but our current recommendation requires reviews be *shorter
+than 200 lines*. Developers who complete changesets longer than this
+number *must* determine a way to split their changes into multiple
+reviews.
 
 .. seealso::
 
@@ -213,6 +226,46 @@ Style & Static Checkers
 
 *How* Should Reviewers Read Changesets
 ======================================
+
+Being able to read code critically for review is an important skill.
+
+Reviewers should read incoming reviews with an eye towards uncovering
+the types of defects mentioned in the introduction.
+
+Read slowly and carefully, until you have a solid understanding
+of the changes in front of you.
+
+.. epitaph::
+
+    The more time spent in review, the more defects are detected. This
+    might sound obvious; what’s not obvious is that this is by far the
+    dominant factor in the number of defects detected.
+
+    -- [BKCR]_, 61
+
+Results fairly consistently ([BKCR_], 60) indicate that reviews
+which take longer than approximately an hour sharply drop off in
+effectiveness, so limit yourself to no longer than that to prevent
+exhaustion, but make the time spent count.
+
+Ask questions in places that need clarification, familiarize yourself
+with this document and with any relevant language or style guides, and
+provide feedback based on your understanding of the changes and of what
+makes quality software.
+
+Review comments are not "commands" -- they are potential openings
+for discussions, but ultimately *both* the author and the reviewer's
+opinions matter, so in cases where opinions differ, come to an
+understanding!
+
+.. seealso::
+
+    [AIPE]_
+        An interesting study in which code reviewers' eye movements were
+        tracked to attempt to answer whether particular methodologies of
+        reviewing code lead to better detection of defects. The results
+        are partially reproduced in [ETRA]_. Both papers deserve some
+        further inspection.
 
 
 Commits vs. Diffs
@@ -362,3 +415,9 @@ References
 
 .. [INTF] `The Influence of Non-technical Factors on Code Review
     <http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6671287>`_ (2013)
+
+.. [AIPE] `Analyzing Individual Performance of Source Code Review Using Reviewers' Eye Movement
+    <http://dl.acm.org/citation.cfm?id=1117357>`_ (2006)
+
+.. [ETRA] `An Eye-tracking Study on the Role of Scan Time in Finding Source Code Defects
+    <http://www.cs.kent.edu/~jmaletic/papers/ETRA12.pdf>`_ (2012)

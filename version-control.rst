@@ -17,6 +17,8 @@ What Makes a Good Commit?
 
 .. sidebar:: :program:`git`
 
+    .. _git:
+
     :program:`git` is a powerful and terrible tool.
 
     .. rubric:: Recommended Settings
