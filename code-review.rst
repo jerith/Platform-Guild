@@ -231,6 +231,17 @@ possible, should a human miss a potential issue.
 *When* Should Code Be Reviewed
 ==============================
 
+A set of changes is "ready" for review when:
+
+* It satisfies the conditions mentioned in this document (see the
+  :ref:`cr-summary`)
+
+* The repository's :doc:`test suite <ci>` has passed, or
+  any failures are explained within the review
+
+The author should ensure that these conditions have been met before
+submitting the review.
+
 .. seealso::
 
     `pre-review`
@@ -238,6 +249,22 @@ possible, should a human miss a potential issue.
 
 Style & Static Checkers
 -----------------------
+
+We briefly comment on the "importance" of style -- the effect of a style
+guide, or of stylistic unison in general on maintainability of a code
+base is deserving of closer inspection which we defer longer comments on.
+
+Under the assumption though that this assertion is well-founded,
+we further maintain that style guides should be accompanied by
+*machine-runnable checkers* whenever possible.
+
+Having a style guide be checkable programmatically is often a challenge
+because of the prevalence of noisy style checkers, or ones that do not
+directly correspond to the particular style settled upon within the
+guild, but we consider a reviewer's time better spent on defects that
+*cannot* be programmatically detected, and strongly encourage that guild
+members collaborate to build or assemble automated tools to reduce the
+need to manually read for style.
 
 
 *How* Should Reviewers Read Changesets
@@ -251,7 +278,7 @@ the types of defects mentioned in the introduction.
 Read slowly and carefully, until you have a solid understanding
 of the changes in front of you.
 
-.. epitaph::
+.. epigraph::
 
     The more time spent in review, the more defects are detected. This
     might sound obvious; what’s not obvious is that this is by far the
@@ -348,6 +375,8 @@ pre-review by the author of a code review.
     complete, free from unrelated changes and ultimately `ready for review
     <ready-for-review>`.
 
+
+.. _cr-summary:
 
 Summary
 =======
