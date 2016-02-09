@@ -32,6 +32,7 @@ failsafe
 faux
 featureful
 formulae
+fu
 hacky
 # FIXME: this should be in the tokenizer? It's for ad hoc
 hoc
@@ -61,6 +62,7 @@ pre
 precompiled
 profiler
 profilers
+programmatically
 reactively
 reimplement
 repo

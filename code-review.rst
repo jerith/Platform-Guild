@@ -10,7 +10,7 @@ Goals
 
 The code review process, in principle and practice, is designed
 to identify :dfn:`defects` -- gaps in functionality, testability,
-maintainability, readability, resillience, coherence or consistency.
+maintainability, readability, resilience, coherence or consistency.
 
 A :dfn:`code reviewer` is tasked with uncovering any such issue
 which may have been missed during the initial implementation by the
@@ -26,7 +26,7 @@ In short:
 
 .. rst-class:: grace-note
 
-    A second pair of eyes intruduces the opportunity to ensure code is
+    A second pair of eyes introduces the opportunity to ensure code is
     correct, simple, maintainable, tested & working as intended.
 
 A *secondary* goal of code review is to disseminate knowledge of changes
