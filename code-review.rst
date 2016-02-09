@@ -77,6 +77,22 @@ themselves*.
         The same survey found that surveyed developers spent 6 hours a
         week, on average, doing code reviews.
 
+Reviews often come in asynchronously. A developer -- potentially in another
+squad -- may finish a reviewable chunk at any point during a sprint, and at
+that point might ask for a review. While it isn't always feasible to drop
+everything to do the review, it is in both parties' interests to find ways to
+address reviews quickly after they're submitted.
+
+.. sidebar:: Keep Moving
+
+    Unless an author is particularly concerned that a review will change the
+    fundamentals of a set of changes, it *often* makes complete sense to
+    continue working on further changesets while a review is underway or
+    submitted.
+
+    Version control, perhaps particularly :ref:`git <git>` can help
+    reconcile the (simultaneous) moving parts.
+
 
 *Who* Should Be a Reviewer?
 ===========================
